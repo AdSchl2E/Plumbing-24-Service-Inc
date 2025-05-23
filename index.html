@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>
+    Plumbing 24 Service Inc | 24/7 Emergency Plumber in Fort Myers, FL
+  </title>
+  <meta
+    name="description"
+    content="24/7 emergency plumbing services in Fort Myers. Call now at 239-292-1993 for leak repairs, drain cleaning, water heater installation. Serving Fort Myers and surrounding areas."
+  />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- AOS (Animate On Scroll) -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+  <style>
+    /* ======= Global ======= */
+    body {
+      scroll-behavior: smooth;
+    }
+    /* ======= Navbar ======= */
+    header {
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 255, 255, 0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    header.scrolled {
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* ======= Hero ======= */
+    .hero {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .pulse-button {
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+    /* ======= Services ======= */
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
+    }
+    /* ======= Gallery Lightbox ======= */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+    }
+    .lightbox-overlay img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox-overlay:target {
+      display: flex;
+    }
+    /* ======= Sticky Call Button ======= */
+    .sticky-call {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 relative overflow-x-hidden">
+  <!-- AOS Init -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init({
+        duration: 800,
+        once: true,
+      });
+    });
+  </script>
+
+<!-- Header -->
+<header
+  id="mainHeader"
+  class="w-full fixed top-0 z-50 py-4"
+  data-aos="fade-down"
+>
+  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex items-center">
+      <img
+        src="img/logo.webp"
+        alt="Plumbing 24 Service Inc Logo"
+        class="h-12 mr-3"
+        data-aos="zoom-in"
+      />
+      <span class="font-bold text-xl">Plumbing 24 Service Inc</span>
+    </div>
+
+    <nav class="hidden md:flex space-x-6">
+      <a href="#services" class="text-gray-700 hover:text-blue-600 text-lg">Services</a>
+      <a href="#projects" class="text-gray-700 hover:text-blue-600 text-lg">Gallery</a>
+      <a href="#contact" class="text-gray-700 hover:text-blue-600 text-lg">Contact</a>
+    </nav>
+
+    <!-- Phone link: hidden on all screens under 640px -->
+    <a
+      href="tel:2392921993"
+      class="hidden sm:flex bg-blue-600 text-white items-center justify-center rounded-md transition  
+             px-4 py-2 hover:bg-blue-700 text-lg"
+      data-aos="fade-left"
+    >
+      <i class="fas fa-phone fa-lg"></i>
+      <span class="ml-2">(239) 292-1993</span>
+    </a>
+
+    <!-- Menu button -->
+    <button id="menuButton" class="md:hidden focus:outline-none text-2xl">
+      <!-- Icône menu -->
+      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <!-- Icône croix (cachée au départ) -->
+      <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden">
+    <nav class="flex flex-col p-3 space-y-5">
+        <a href="#services" class="text-gray-700 hover:text-blue-600 text-lg">Services</a>
+        <a href="#projects" class="text-gray-700 hover:text-blue-600 text-lg">Gallery</a>
+        <a href="#contact" class="text-gray-700 hover:text-blue-600 text-lg">Contact</a>
+    </nav>
+    </div>
+
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero flex items-center justify-center text-white text-center bg-black">
+    <img src="img/hero-image.webp" alt="Plumbing Service" class="absolute inset-0 w-full h-full object-cover opacity-50" />
+    <div class="relative z-10 px-4 max-w-3xl" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
+        Fast, Reliable Plumbing Services
+      </h1>
+      <h2 class="text-2xl md:text-3xl font-semibold mb-6">
+        24/7 Emergency Support in Fort Myers
+      </h2>
+      <p class="text-lg md:text-xl mb-8">
+        Licensed & insured, bilingual technicians, ready to help you anytime.
+      </p>
+      <a
+        href="tel:2392921993"
+        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition pulse-button inline-block text-lg"
+      >
+        <i class="fas fa-phone mr-2"></i> Call Now
+      </a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section
+    id="services"
+    class="py-20 bg-gray-50"
+    data-aos="fade-up"
+  >
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Plumbing Services</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Quality workmanship with transparent pricing</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div
+          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="100"
+        >
+          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-tint fa-lg"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Leak Detection & Repair</h3>
+          <p class="text-gray-600 mb-4">Swift detection and fix to prevent costly water damage.</p>
+          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        </div>
+        <!-- Service Card 2 -->
+        <div
+          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        >
+          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-shower fa-lg"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Drain Cleaning</h3>
+          <p class="text-gray-600 mb-4">High-pressure cleaning to remove clogs and restore flow.</p>
+          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        </div>
+        <!-- Service Card 3 -->
+        <div
+          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="300"
+        >
+          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-toilet fa-lg"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Faucet & Toilet Repair</h3>
+          <p class="text-gray-600 mb-4">Fix leaky faucets, running toilets, and more.</p>
+          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        </div>
+        <!-- Service Card 4 -->
+        <div
+          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
+          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-fire fa-lg"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Water Heater Services</h3>
+          <p class="text-gray-600 mb-4">Installation, repair, and maintenance to keep you warm.</p>
+          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        </div>
+        <!-- Service Card 5 -->
+        <div
+          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="500"
+        >
+          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-trash-alt fa-lg"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Garbage Disposal</h3>
+          <p class="text-gray-600 mb-4">Installation and repair for smooth kitchen cleanup.</p>
+          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        </div>
+        <!-- Service Card 6 -->
+        <div
+          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="600"
+        >
+          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
+            <i class="fas fa-exclamation-triangle fa-lg"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Sewer Repair</h3>
+          <p class="text-gray-600 mb-4">Expert sewer line repairs to keep water flowing.</p>
+          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Gallery Section -->
+  <section
+    id="projects"
+    class="py-20 bg-gray-50"
+    data-aos="fade-up"
+  >
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-8">Our Recent Projects</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <a href="#img1" class="group" data-aos="zoom-in" data-aos-delay="100">
+          <img
+            src="img/gallery/toilette-propre.jpg"
+            alt="Bathroom plumbing installation"
+            class="rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </a>
+        <a href="#img2" class="group" data-aos="zoom-in" data-aos-delay="200">
+          <img
+            src="img/gallery/tuyau-brille-sdb.jpg"
+            alt="Pipe repair"
+            class="rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </a>
+        <a href="#img3" class="group" data-aos="zoom-in" data-aos-delay="300">
+          <img
+            src="img/gallery/grosse-machine-tuyau.jpg"
+            alt="Water heater installation"
+            class="rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </a>
+      </div>
+    </div>
+    <!-- Lightbox Overlays -->
+    <div id="img1" class="lightbox-overlay">
+      <a href="#projects" class="absolute top-6 right-6 text-white text-3xl">&times;</a>
+      <img
+        src="img/gallery/toilette-propre.jpg"
+        alt="Pipe repair"
+      />
+    </div>
+    <div id="img2" class="lightbox-overlay">
+      <a href="#projects" class="absolute top-6 right-6 text-white text-3xl">&times;</a>
+      <img
+        src="img/gallery/tuyau-brille-sdb.jpg"
+        alt="Kitchen plumbing repair"
+      />
+    </div>
+    <div id="img3" class="lightbox-overlay">
+      <a href="#projects" class="absolute top-6 right-6 text-white text-3xl">&times;</a>
+      <img
+        src="img/gallery/grosse-machine-tuyau.jpg"
+        alt="Water heater installation"
+      />
+    </div>
+  </section>
+
+  <!-- Service Area Section (with Map) -->
+  <section
+    class="py-16 bg-white"
+    data-aos="fade-up"
+    data-aos-anchor-placement="top-bottom"
+  >
+    <div class="max-w-6xl mx-auto px-4">
+      <div
+        class="text-center mb-12"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <h2 class="text-3xl font-bold mb-4">
+          We Serve Fort Myers & Surrounding Areas
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Local plumbers you can trust
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div data-aos="fade-right" class="space-y-4">
+          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
+            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+            <span>Fort Myers</span>
+          </div>
+          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
+            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+            <span>Cape Coral</span>
+          </div>
+          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
+            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+            <span>Lehigh Acres</span>
+          </div>
+          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
+            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+            <span>Estero</span>
+          </div>
+          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
+            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+            <span>Bonita Springs</span>
+          </div>
+        </div>
+
+        <div
+          class="h-64 md:h-96 rounded-lg overflow-hidden shadow-lg"
+          data-aos="fade-left"
+        >
+          <iframe
+            width="100%"
+            height="600"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1165%20Palm%20Avenue,%20North%20Fort%20Myers%20Florida.%2033903+(Plumbing%2024%20Service%20Inc)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section
+    id="contact"
+    class="py-20 bg-gray-50"
+    data-aos="fade-up"
+  >
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10" data-aos="fade-up">
+        <h2 class="text-3xl md:text-4xl font-bold">Get in Touch</h2>
+        <p class="text-gray-600 mt-2">We’re here 24/7 to assist you. Call or fill out the form below.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Contact Info -->
+        <div class="space-y-6" data-aos="fade-right">
+          <div class="flex items-center">
+            <i class="fas fa-phone fa-lg text-blue-600 mr-4"></i>
+            <div>
+              <h4 class="font-semibold">Phone</h4>
+              <a href="tel:2392921993" class="text-gray-800 hover:text-blue-600">(239) 292-1993</a>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-map-marker-alt fa-lg text-blue-600 mr-4"></i>
+            <div>
+              <h4 class="font-semibold">Address</h4>
+              <span class="text-gray-800">1165 Palm Avenue, Fort Myers, FL 33903</span>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-envelope fa-lg text-blue-600 mr-4"></i>
+            <div>
+              <h4 class="font-semibold">Email</h4>
+              <a href="mailto:service@plumbing24service.com" class="text-gray-800 hover:text-blue-600">
+                service@plumbing24service.com
+              </a>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-clock fa-lg text-blue-600 mr-4"></i>
+            <div>
+              <h4 class="font-semibold">Hours</h4>
+              <span class="text-gray-800">24/7 Emergency Service</span><br />
+              <span class="text-gray-800">Regular: Mon-Sun 8 am–8 pm</span>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a
+              href="https://wa.me/12392921993"
+              class="bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-md inline-flex items-center transition"
+              data-aos="fade-left"
+            >
+              <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+            </a>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <form action="#" method="POST" class="space-y-6" data-aos="fade-left" data-aos-delay="200">
+          <div>
+            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="John Doe"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="you@example.com"
+            />
+          </div>
+          <div>
+            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              required
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="(239) 555-0123"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="How can we help you?"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition inline-block"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- About Footer -->
+        <div data-aos="fade-right">
+          <div class="flex items-center mb-4">
+            <img
+              src="img/logo.webp"
+              alt="Plumbing 24 Service Inc Logo"
+              class="h-12 mr-3"
+            />
+            <span class="font-bold text-xl">Plumbing 24 Service Inc</span>
+          </div>
+          <p class="text-gray-400 mb-4">
+            Licensed & insured plumbing services for Fort Myers homes and businesses. Fast response and affordable rates.
+          </p>
+        </div>
+        <!-- Contact Footer -->
+        <div data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-lg font-bold mb-4">Contact</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li class="flex items-center">
+              <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
+              <a href="tel:2392921993" class="hover:text-white">(239) 292-1993</a>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
+              <span>1165 Palm Avenue, Fort Myers, FL 33903</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-blue-400"></i>
+              <a href="mailto:service@plumbing24service.com" class="hover:text-white">service@plumbing24service.com</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Hours Footer -->
+        <div data-aos="fade-left" data-aos-delay="100">
+          <h3 class="text-lg font-bold mb-4">Hours</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li>24/7 Emergency Service</li>
+            <li>Regular Hours: Mon-Sun 8 am–8 pm</li>
+            <li>After Hours: Emergencies Only</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm" data-aos="fade-up" data-aos-delay="200">
+        <p>© 2025 Plumbing 24 Service Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Call Button (Mobile) -->
+  <div class="sticky-call md:hidden" data-aos="fade-in">
+    <a
+      href="tel:2392921993"
+      class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition"
+    >
+      <i class="fas fa-phone text-2xl"></i>
+    </a>
+  </div>
+
+  <!-- Header scroll behavior -->
+  <script>
+    window.addEventListener("scroll", () => {
+      const header = document.getElementById("mainHeader");
+      if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIcon = document.getElementById('menuIcon');
+    const closeIcon = document.getElementById('closeIcon');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        menuIcon.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
