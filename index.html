@@ -1,603 +1,1159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>
-    Plumbing 24 Service Inc | 24/7 Emergency Plumber in Fort Myers, FL
-  </title>
-  <meta
-    name="description"
-    content="24/7 emergency plumbing services in Fort Myers. Call now at 239-292-1993 for leak repairs, drain cleaning, water heater installation. Serving Fort Myers and surrounding areas."
-  />
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <!-- AOS (Animate On Scroll) -->
-  <link
-    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-    rel="stylesheet"
-  />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
-  <style>
-    /* ======= Global ======= */
-    body {
-      scroll-behavior: smooth;
-    }
-    /* ======= Navbar ======= */
-    header {
-      backdrop-filter: blur(10px);
-      background-color: rgba(255, 255, 255, 0.7);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    header.scrolled {
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    /* ======= Hero ======= */
-    .hero {
-      position: relative;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .pulse-button {
-      animation: pulse 1.8s infinite;
-    }
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-    /* ======= Services ======= */
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(59, 130, 246, 0.2);
-    }
-    /* ======= Gallery Lightbox ======= */
-    .lightbox-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.8);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 100;
-    }
-    .lightbox-overlay img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-    }
-    .lightbox-overlay:target {
-      display: flex;
-    }
-    /* ======= Sticky Call Button ======= */
-    .sticky-call {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-  </style>
-</head>
-
-<body class="font-sans text-gray-800 relative overflow-x-hidden">
-  <!-- AOS Init -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      AOS.init({
-        duration: 800,
-        once: true,
-        offset: 0,
-      });
-    });
-  </script>
-
-<!-- Header -->
-<header
-  id="mainHeader"
-  class="w-full fixed top-0 z-50 py-4"
-  data-aos="fade-down"
->
-  <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-    <div class="flex items-center">
-      <img
-        src="img/logo.webp"
-        alt="Plumbing 24 Service Inc Logo"
-        class="h-12 mr-3"
-        data-aos="zoom-in"
-      />
-      <span class="font-bold text-xl">Plumbing 24 Service Inc</span>
-    </div>
-
-    <nav class="hidden md:flex space-x-6">
-      <a href="#services" class="text-gray-700 hover:text-blue-600 text-lg">Services</a>
-      <a href="#projects" class="text-gray-700 hover:text-blue-600 text-lg">Gallery</a>
-      <a href="#contact" class="text-gray-700 hover:text-blue-600 text-lg">Contact</a>
-    </nav>
-
-    <!-- Phone link: hidden on all screens under 640px -->
-    <a
-      href="tel:2392921993"
-      class="hidden sm:flex bg-blue-600 text-white items-center justify-center rounded-md transition  
-             px-4 py-2 hover:bg-blue-700 text-lg"
-      data-aos="fade-left"
-    >
-      <i class="fas fa-phone fa-lg"></i>
-      <span class="ml-2">(239) 292-1993</span>
-    </a>
-
-    <!-- Menu button -->
-    <button id="menuButton" class="md:hidden focus:outline-none text-2xl">
-      <!-- Icône menu -->
-      <svg id="menuIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <!-- Icône croix (cachée au départ) -->
-      <svg id="closeIcon" xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-          d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden md:hidden">
-    <nav class="flex flex-col p-3 space-y-5">
-        <a href="#services" class="text-gray-700 hover:text-blue-600 text-lg">Services</a>
-        <a href="#projects" class="text-gray-700 hover:text-blue-600 text-lg">Gallery</a>
-        <a href="#contact" class="text-gray-700 hover:text-blue-600 text-lg">Contact</a>
-    </nav>
-    </div>
-
-</header>
-
-  <!-- Hero Section -->
-  <section class="hero flex items-center justify-center text-white text-center bg-black">
-    <img src="img/hero-image.webp" alt="Plumbing Service" class="absolute inset-0 w-full h-full object-cover opacity-50" />
-    <div class="relative z-10 px-4 max-w-3xl" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-extrabold mb-4">
-        Fast, Reliable Plumbing Services
-      </h1>
-      <h2 class="text-2xl md:text-3xl font-semibold mb-6">
-        24/7 Emergency Support in Fort Myers
-      </h2>
-      <p class="text-lg md:text-xl mb-8">
-        Licensed & insured, ready to help you anytime.
-      </p>
-      <a
-        href="tel:2392921993"
-        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition pulse-button inline-block text-lg"
-      >
-        <i class="fas fa-phone mr-2"></i> Call Now
-      </a>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section
-    id="services"
-    class="py-20 bg-gray-50"
-    data-aos="fade-up"
-  >
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Plumbing Services</h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">Quality workmanship with transparent pricing</p>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Service Card 1 -->
-        <div
-          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
-          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-            <i class="fas fa-tint fa-lg"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Leak Detection & Repair</h3>
-          <p class="text-gray-600 mb-4">Swift detection and fix to prevent costly water damage.</p>
-          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast, Reliable Plumbing Services in Fort Myers | Plumbing Service 24
+      Inc</title>
+    <meta name="description"
+      content="24/7 emergency plumbing services in Fort Myers. Licensed plumbers for repairs, installations, and maintenance. Same-day service with lifetime warranty. Call (239) 292-1993">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html {
+            scroll-padding-top: 90px;
+            scroll-behavior: smooth;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg-mobile.png');
+            }
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .before-after {
+            position: relative;
+            overflow: hidden;
+        }
+        .before-after img {
+            transition: all 0.3s ease;
+        }
+        .before-after:hover img {
+            transform: scale(1.05);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .accordion-content.active {
+            max-height: 500px;
+        }
+    </style>
+  </head>
+  <body class="font-sans">
+    <!-- Top Bar -->
+    <div class="bg-blue-800 text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:2392921993" class="font-bold text-lg">(239) 292-1993</a>
         </div>
-        <!-- Service Card 2 -->
-        <div
-          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
-          data-aos="zoom-in"
-          data-aos-delay="200"
-        >
-          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-            <i class="fas fa-shower fa-lg"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Drain Cleaning</h3>
-          <p class="text-gray-600 mb-4">High-pressure cleaning to remove clogs and restore flow.</p>
-          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
-        </div>
-        <!-- Service Card 3 -->
-        <div
-          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
-          data-aos="zoom-in"
-          data-aos-delay="300"
-        >
-          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-            <i class="fas fa-toilet fa-lg"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Faucet & Toilet Repair</h3>
-          <p class="text-gray-600 mb-4">Fix leaky faucets, running toilets, and more.</p>
-          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
-        </div>
-        <!-- Service Card 4 -->
-        <div
-          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-            <i class="fas fa-fire fa-lg"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Water Heater Services</h3>
-          <p class="text-gray-600 mb-4">Installation, repair, and maintenance to keep you warm.</p>
-          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
-        </div>
-        <!-- Service Card 5 -->
-        <div
-          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
-          data-aos="zoom-in"
-          data-aos-delay="500"
-        >
-          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-            <i class="fas fa-trash-alt fa-lg"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Garbage Disposal</h3>
-          <p class="text-gray-600 mb-4">Installation and repair for smooth kitchen cleanup.</p>
-          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
-        </div>
-        <!-- Service Card 6 -->
-        <div
-          class="service-card bg-white p-6 rounded-lg shadow-md transform transition duration-300"
-          data-aos="zoom-in"
-          data-aos-delay="600"
-        >
-          <div class="bg-blue-100 text-blue-600 w-12 h-12 flex items-center justify-center rounded-full mb-4">
-            <i class="fas fa-exclamation-triangle fa-lg"></i>
-          </div>
-          <h3 class="text-xl font-semibold mb-2">Sewer Repair</h3>
-          <p class="text-gray-600 mb-4">Expert sewer line repairs to keep water flowing.</p>
-          <a href="tel:2392921993" class="text-blue-600 font-medium hover:underline">Call Now</a>
+        <div class="hidden md:flex space-x-4">
+          <span class="text-sm">24/7 Emergency Service</span>
+          <span class="text-sm">Licensed & Insured</span>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Projects / Gallery Section -->
-  <section
-    id="projects"
-    class="py-20 bg-gray-50"
-    data-aos="fade-up"
-  >
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold mb-8">Our Recent Projects</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <a href="#img1" class="group" data-aos="zoom-in" data-aos-delay="100">
-          <img
-            src="img/gallery/toilette-propre.jpg"
-            alt="Bathroom plumbing installation"
-            class="rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </a>
-        <a href="#img2" class="group" data-aos="zoom-in" data-aos-delay="200">
-          <img
-            src="img/gallery/tuyau-brille-sdb.jpg"
-            alt="Pipe repair"
-            class="rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </a>
-        <a href="#img3" class="group" data-aos="zoom-in" data-aos-delay="300">
-          <img
-            src="img/gallery/grosse-machine-tuyau.jpg"
-            alt="Water heater installation"
-            class="rounded-lg shadow-lg w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        </a>
-      </div>
-    </div>
-    <!-- Lightbox Overlays -->
-    <div id="img1" class="lightbox-overlay">
-      <a href="#projects" class="absolute top-6 right-6 text-white text-3xl">&times;</a>
-      <img
-        src="img/gallery/toilette-propre.jpg"
-        alt="Pipe repair"
-      />
-    </div>
-    <div id="img2" class="lightbox-overlay">
-      <a href="#projects" class="absolute top-6 right-6 text-white text-3xl">&times;</a>
-      <img
-        src="img/gallery/tuyau-brille-sdb.jpg"
-        alt="Kitchen plumbing repair"
-      />
-    </div>
-    <div id="img3" class="lightbox-overlay">
-      <a href="#projects" class="absolute top-6 right-6 text-white text-3xl">&times;</a>
-      <img
-        src="img/gallery/grosse-machine-tuyau.jpg"
-        alt="Water heater installation"
-      />
-    </div>
-  </section>
-
-  <!-- Service Area Section (with Map) -->
-  <section
-    class="py-16 bg-white"
-    data-aos="fade-up"
-    data-aos-anchor-placement="top-bottom"
-  >
-    <div class="max-w-6xl mx-auto px-4">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
       <div
-        class="text-center mb-12"
-        data-aos="fade-up"
-        data-aos-delay="100"
-      >
-        <h2 class="text-3xl font-bold mb-4">
-          We Serve Fort Myers & Surrounding Areas
-        </h2>
-        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          Local plumbers you can trust
-        </p>
+        class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="img/logo.webp"
+            alt="Plumbing Service 24 Inc Logo" class="h-16 w-16 mr-4">
+          <h1 class="text-2xl font-bold text-blue-800">Plumbing Service 24
+            Inc</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#services"
+            class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
+          <a href="#about"
+            class="text-blue-800 hover:text-blue-600 font-medium">About Us</a>
+          <a href="#projects"
+            class="text-blue-800 hover:text-blue-600 font-medium">Projects</a>
+          <a href="#contact"
+            class="text-blue-800 hover:text-blue-600 font-medium">Contact</a>
+          <a href="#blog"
+            class="text-blue-800 hover:text-blue-600 font-medium">Blog</a>
+          <a href="#faq"
+            class="text-blue-800 hover:text-blue-600 font-medium">FAQ</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-blue-800">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div data-aos="fade-in" class="space-y-4">
-          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
-            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
-            <span>Fort Myers</span>
-          </div>
-          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
-            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
-            <span>Cape Coral</span>
-          </div>
-          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
-            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
-            <span>Lehigh Acres</span>
-          </div>
-          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
-            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
-            <span>Estero</span>
-          </div>
-          <div class="flex items-center bg-gray-100 p-3 rounded shadow border border-gray-200">
-            <i class="fas fa-check-circle text-blue-500 mr-2"></i>
-            <span>Bonita Springs</span>
-          </div>
-        </div>
-
-        <div
-          class="h-64 md:h-96 rounded-lg overflow-hidden shadow-lg"
-          data-aos="fade-in"
-        >
-          <iframe
-            width="100%"
-            height="600"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1165%20Palm%20Avenue,%20North%20Fort%20Myers%20Florida.%2033903+(Plumbing%2024%20Service%20Inc)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-          ></iframe>
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu"
+        class="hidden bg-white w-full border-t border-gray-200 md:hidden">
+        <div class="container mx-auto px-4 py-4">
+          <nav class="flex flex-col space-y-4">
+            <a href="#services"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Services</a>
+            <a href="#about"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">About
+              Us</a>
+            <a href="#projects"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Projects</a>
+            <a href="#contact"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact</a>
+            <a href="#blog"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Blog</a>
+            <a href="#faq"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2">FAQ</a>
+          </nav>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Contact Section -->
-  <section
-    id="contact"
-    class="py-20 bg-gray-50"
-    data-aos="fade-up"
-  >
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="text-center mb-10" data-aos="fade-up">
-        <h2 class="text-3xl md:text-4xl font-bold">Get in Touch</h2>
-        <p class="text-gray-600 mt-2">We’re here 24/7 to assist you. Call or fill out the form below.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Contact Info -->
-        <div class="space-y-6" data-aos="fade-in">
-          <div class="flex items-center">
-            <i class="fas fa-phone fa-lg text-blue-600 mr-4"></i>
-            <div>
-              <h4 class="font-semibold">Phone</h4>
-              <a href="tel:2392921993" class="text-gray-800 hover:text-blue-600">(239) 292-1993</a>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <i class="fas fa-map-marker-alt fa-lg text-blue-600 mr-4"></i>
-            <div>
-              <h4 class="font-semibold">Address</h4>
-              <span class="text-gray-800">1165 Palm Avenue, Fort Myers, FL 33903</span>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <i class="fas fa-envelope fa-lg text-blue-600 mr-4"></i>
-            <div>
-              <h4 class="font-semibold">Email</h4>
-              <a href="mailto:service@plumbing24service.com" class="text-gray-800 hover:text-blue-600">
-                service@plumbing24service.com
-              </a>
-            </div>
-          </div>
-          <div class="flex items-center">
-            <i class="fas fa-clock fa-lg text-blue-600 mr-4"></i>
-            <div>
-              <h4 class="font-semibold">Hours</h4>
-              <span class="text-gray-800">24/7 Emergency Service</span><br />
-              <span class="text-gray-800">Regular: Mon-Sun 8 am–8 pm</span>
-            </div>
-          </div>
-          <div class="mt-6">
-            <a
-              href="https://wa.me/12392921993"
-              class="bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-md inline-flex items-center transition"
-              data-aos="fade-in"
-            >
-              <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+    <!-- Hero Section -->
+    <section class="hero text-white py-20 md:py-32">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6">Fast, Reliable
+            Plumbing Services in Fort Myers</h2>
+          <p class="text-xl mb-8">24/7 emergency plumbing services with same-day
+            response. Our licensed professionals deliver quality work with a
+            lifetime warranty.</p>
+          <div
+            class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="tel:2392921993"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+              <i class="fas fa-phone-alt mr-2"></i> Call Now (239) 292-1993
+            </a>
+            <a href="#contact"
+              class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg text-center transition duration-300">
+              Request Free Estimate
             </a>
           </div>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <div
+              class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded">
+              <i class="fas fa-check-circle mr-2 text-green-300"></i>
+              <span>Same Day Service</span>
+            </div>
+            <div
+              class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded">
+              <i class="fas fa-check-circle mr-2 text-green-300"></i>
+              <span>Lifetime Warranty</span>
+            </div>
+            <div
+              class="flex items-center bg-white bg-opacity-20 px-4 py-2 rounded">
+              <i class="fas fa-check-circle mr-2 text-green-300"></i>
+              <span>Best Price Guarantee</span>
+            </div>
+          </div>
         </div>
-        <!-- Contact Form -->
-        <form action="#" method="POST" class="space-y-6" data-aos="fade-in" data-aos-delay="200">
-          <div>
-            <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="John Doe"
-            />
+        <div class="md:w-1/2">
+          <div class="bg-white bg-opacity-90 rounded-lg p-6 max-w-md mx-auto">
+            <h3 class="text-2xl font-bold text-blue-800 mb-4">Request a Free
+              Estimate</h3>
+            <form class="space-y-4">
+              <div>
+                <input type="text" placeholder="Your Name"
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+              </div>
+              <div>
+                <input type="email" placeholder="Email Address"
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+              </div>
+              <div>
+                <input type="tel" placeholder="Phone Number"
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+              </div>
+              <div>
+                <select
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                  <option>Select Service</option>
+                  <option>Emergency Plumbing</option>
+                  <option>Drain Cleaning</option>
+                  <option>Water Heater Repair</option>
+                  <option>Pipe Repair</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <textarea placeholder="Describe your plumbing issue"
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"></textarea>
+              </div>
+              <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                Get Free Estimate
+              </button>
+            </form>
           </div>
-          <div>
-            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="you@example.com"
-            />
-          </div>
-          <div>
-            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="(239) 555-0123"
-            />
-          </div>
-          <div>
-            <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              rows="4"
-              required
-              class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-              placeholder="How can we help you?"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md transition inline-block"
-          >
-            Send Message
-          </button>
-        </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-12" data-aos="fade-up">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- About Footer -->
-        <div data-aos="fade-in">
-          <div class="flex items-center mb-4">
-            <img
-              src="img/logo.webp"
-              alt="Plumbing 24 Service Inc Logo"
-              class="h-12 mr-3"
-            />
-            <span class="font-bold text-xl">Plumbing 24 Service Inc</span>
-          </div>
-          <p class="text-gray-400 mb-4">
-            Licensed & insured plumbing services for Fort Myers homes and businesses. Fast response and affordable rates.
-          </p>
+    <!-- Intro Section -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Plumbing
+            Services in Fort Myers, FL</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
-        <!-- Contact Footer -->
-        <div data-aos="fade-up" data-aos-delay="100">
-          <h3 class="text-lg font-bold mb-4">Contact</h3>
-          <ul class="space-y-2 text-gray-400">
-            <li class="flex items-center">
-              <i class="fas fa-phone-alt mr-3 text-blue-400"></i>
-              <a href="tel:2392921993" class="hover:text-white">(239) 292-1993</a>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-map-marker-alt mr-3 text-blue-400"></i>
-              <span>1165 Palm Avenue, Fort Myers, FL 33903</span>
-            </li>
-            <li class="flex items-center">
-              <i class="fas fa-envelope mr-3 text-blue-400"></i>
-              <a href="mailto:service@plumbing24service.com" class="hover:text-white">service@plumbing24service.com</a>
-            </li>
-          </ul>
-        </div>
-        <!-- Hours Footer -->
-        <div data-aos="fade-in" data-aos-delay="100">
-          <h3 class="text-lg font-bold mb-4">Hours</h3>
-          <ul class="space-y-2 text-gray-400">
-            <li>24/7 Emergency Service</li>
-            <li>Regular Hours: Mon-Sun 8 am-8 pm</li>
-            <li>After Hours: Emergencies Only</li>
-          </ul>
+        <div class="max-w-4xl mx-auto text-lg text-gray-700">
+          <p class="mb-6">From minor leaks to major pipe bursts, Plumbing
+            Service 24 Inc is your trusted plumbing expert serving Fort Myers
+            and surrounding areas. While some plumbing issues like a slow drain
+            might seem simple, most require professional attention to prevent
+            costly damage.</p>
+          <p class="mb-6">Our comprehensive plumbing services cover both
+            residential and commercial properties throughout Southwest Florida.
+            Whether you're dealing with a clogged kitchen sink, water heater
+            failure, or need complete repiping, our team of licensed plumbers is
+            ready to help 24/7.</p>
+          <p>We utilize state-of-the-art equipment and techniques to ensure
+            efficient, clean solutions for all your plumbing needs. With
+            transparent pricing, free estimates, and a commitment to customer
+            satisfaction, we're proud to be Fort Myers' most reliable plumbing
+            service provider.</p>
         </div>
       </div>
-      <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 text-sm" data-aos="fade-in" data-aos-delay="200">
-        <p>© 2025 Plumbing 24 Service Inc. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <!-- Sticky Call Button (Mobile) -->
-  <div class="sticky-call md:hidden" data-aos="fade-in">
-    <a
-      href="tel:2392921993"
-      class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition"
-    >
-      <i class="fas fa-phone text-2xl"></i>
+    <!-- Services Section -->
+    <section id="services" class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Professional
+            Plumbing Services</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive
+            solutions for all your plumbing needs in Fort Myers and surrounding
+            areas</p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="h-48 bg-blue-100 flex items-center justify-center">
+              <i class="fas fa-tools text-6xl text-blue-600"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Emergency
+                Plumbing</h3>
+              <p class="text-gray-600 mb-4">24/7 response to burst pipes, severe
+                leaks, and other urgent plumbing emergencies to prevent water
+                damage to your Fort Myers property.</p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Burst pipe repair</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Sewage backup cleanup</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Flood prevention</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="h-48 bg-blue-100 flex items-center justify-center">
+              <i class="fas fa-shower text-6xl text-blue-600"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Drain
+                Cleaning</h3>
+              <p class="text-gray-600 mb-4">Professional drain cleaning services
+                using hydro jetting and other advanced techniques to clear
+                stubborn clogs in Fort Myers homes.</p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Kitchen sink clogs</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Bathtub/shower drains</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Main sewer line cleaning</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="h-48 bg-blue-100 flex items-center justify-center">
+              <i class="fas fa-fire-alt text-6xl text-blue-600"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Water Heater
+                Services</h3>
+              <p class="text-gray-600 mb-4">Expert installation, repair, and
+                maintenance of tank and tankless water heaters for Fort Myers
+                residences and businesses.</p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Tankless water heater installation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Leaking water heater repair</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Annual maintenance plans</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="h-48 bg-blue-100 flex items-center justify-center">
+              <i class="fas fa-toilet text-6xl text-blue-600"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Toilet Repair &
+                Installation</h3>
+              <p class="text-gray-600 mb-4">Complete toilet services including
+                repairs, replacements, and new installations for Fort Myers
+                homeowners.</p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Clogged toilet repair</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Toilet flange replacement</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Water-efficient toilet upgrades</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="h-48 bg-blue-100 flex items-center justify-center">
+              <i class="fas fa-faucet text-6xl text-blue-600"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Pipe Repair &
+                Replacement</h3>
+              <p class="text-gray-600 mb-4">Trenchless pipe repair and
+                replacement solutions to minimize disruption to your Fort Myers
+                property.</p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Leaky pipe repair</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Pipe relining technology</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Whole-house repiping</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="service-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="h-48 bg-blue-100 flex items-center justify-center">
+              <i class="fas fa-home text-6xl text-blue-600"></i>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Commercial
+                Plumbing</h3>
+              <p class="text-gray-600 mb-4">Specialized plumbing services for
+                Fort Myers businesses, restaurants, and commercial
+                properties.</p>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Grease trap installation</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Backflow prevention</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                  <span>Commercial water heater services</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="py-16 bg-blue-800 text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">How We Work</h2>
+          <p class="text-xl max-w-2xl mx-auto">Service That’s Simple and
+            Straightforward</p>
+          <div class="w-24 h-1 bg-white mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center">
+            <div
+              class="bg-white bg-opacity-20 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-search text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Diagnose & Evaluate</h3>
+            <p class="text-blue-100">Our expert plumbers perform a detailed
+              assessment with state-of-the-art tools to pinpoint the exact
+              problem.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center">
+            <div
+              class="bg-white bg-opacity-20 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-file-invoice-dollar text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Estimate & Execute</h3>
+            <p class="text-blue-100">You receive a clear, itemized estimate
+              upfront. Once approved, we get straight to work—no hidden costs,
+              just honest pricing.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center">
+            <div
+              class="bg-white bg-opacity-20 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-6">
+              <i class="fas fa-broom text-4xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Finalize & Clean</h3>
+            <p class="text-blue-100">Upon completion, we thoroughly clean the
+              work area and perform a final inspection to guarantee your
+              complete satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-800 mb-4">Recent Plumbing
+            Projects</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">See how we've
+            helped Fort Myers homeowners and businesses with their plumbing
+            needs</p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="before-after bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="img/gallery/tuyau-brille-sdb.jpg"
+                alt="Burst pipe repair" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-blue-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                <div class="text-white p-4 text-center">
+                  <h3 class="text-xl font-bold mb-2">Burst Pipe Emergency</h3>
+                  <p>Repaired a burst pipe in a Fort Myers home within 2 hours
+                    of the call, preventing extensive water damage.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-blue-800">Emergency Pipe
+                Repair</h3>
+              <p class="text-gray-600">North Fort Myers residence</p>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="before-after bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="img/gallery/grosse-machine-tuyau.jpg"
+                alt="Water heater installation"
+                class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-blue-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                <div class="text-white p-4 text-center">
+                  <h3 class="text-xl font-bold mb-2">Tankless Water Heater</h3>
+                  <p>Installed an energy-efficient tankless water heater for a
+                    Cape Coral family, saving them 30% on energy bills.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-blue-800">Water Heater
+                Upgrade</h3>
+              <p class="text-gray-600">Cape Coral home</p>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="before-after bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+            <div class="relative h-64 overflow-hidden">
+              <img
+                src="img/gallery/toilette-propre.jpg"
+                alt="Repaired clean toilet" class="w-full h-full object-cover">
+              <div
+                class="absolute inset-0 bg-blue-800 bg-opacity-70 flex items-center justify-center opacity-0 hover:opacity-100 transition duration-300">
+                <div class="text-white p-4 text-center">
+                  <h3 class="text-xl font-bold mb-2">Toilet Repair &
+                    Sanitization</h3>
+                  <p>Professional repair and deep cleaning for a spotless, fully
+                    functional toilet.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              <h3 class="text-lg font-bold text-blue-800">Toilet Repair</h3>
+              <p class="text-gray-600">Residential Home, Fort Myers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-800 mb-4">Our Service
+            Area</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Serving all of
+            Southwest Florida with 24/7 emergency plumbing services</p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md overflow-hidden">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114103.1085181686!2d-81.8784536!3d26.640628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db1a69f5d7833f%3A0x398e9e274d52e8a5!2sFort%20Myers%2C%20FL!5e0!3m2!1sen!2sus!4v1689871234567!5m2!1sen!2sus"
+            width="100%" height="450" style="border:0;" allowfullscreen
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Fort Myers</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Cape Coral</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Lehigh Acres</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">North Fort Myers</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Estero</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Bonita Springs</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Sanibel</h3>
+          </div>
+          <div class="bg-gray-100 p-3 rounded-lg">
+            <h3 class="font-bold text-blue-800">Pine Island</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-blue-800 text-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+          <p class="text-xl max-w-2xl mx-auto">We're here 24/7 to assist with
+            all your plumbing needs in Fort Myers</p>
+          <div class="w-24 h-1 bg-white mx-auto mt-4"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+          <div class="lg:w-1/2">
+            <div class="bg-white bg-opacity-10 rounded-lg p-8 h-full">
+              <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="fas fa-phone-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold">Phone</h4>
+                    <a href="tel:2392921993"
+                      class="text-lg hover:underline">(239) 292-1993</a>
+                    <p class="text-blue-200 text-sm">24/7 Emergency Service</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold">Address</h4>
+                    <p>1165 Palm Avenue, Fort Myers, FL 33903</p>
+                    <p class="text-blue-200 text-sm">Serving all of Southwest
+                      Florida</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold">Email</h4>
+                    <a href="mailto:service@plumbing24service.com"
+                      class="hover:underline">service@plumbing24service.com</a>
+                  </div>
+                </div>
+
+                <div class="flex items-start">
+                  <div
+                    class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold">Hours</h4>
+                    <p>24/7 Emergency Service</p>
+                    <p class="text-blue-200 text-sm">Regular Hours: Mon-Sun 8
+                      am-8 pm</p>
+                    <p class="text-blue-200 text-sm">After Hours: Emergencies
+                      Only</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <div class="bg-white rounded-lg p-8 h-full">
+              <h3 class="text-2xl font-bold text-blue-800 mb-6">Request a Free
+                Estimate</h3>
+              <form class="space-y-4">
+                <div>
+                  <label for="name"
+                    class="block text-gray-700 font-medium mb-1">Your
+                    Name</label>
+                  <input type="text" id="name" placeholder="John Doe"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                </div>
+
+                <div>
+                  <label for="email"
+                    class="block text-gray-700 font-medium mb-1">Email
+                    Address</label>
+                  <input type="email" id="email" placeholder="you@example.com"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                </div>
+
+                <div>
+                  <label for="phone"
+                    class="block text-gray-700 font-medium mb-1">Phone
+                    Number</label>
+                  <input type="tel" id="phone" placeholder="(239) 555-0123"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                </div>
+
+                <div>
+                  <label for="service"
+                    class="block text-gray-700 font-medium mb-1">Service
+                    Needed</label>
+                  <select id="service"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
+                    <option>Select Service</option>
+                    <option>Emergency Plumbing</option>
+                    <option>Drain Cleaning</option>
+                    <option>Water Heater Repair/Installation</option>
+                    <option>Toilet Repair/Installation</option>
+                    <option>Pipe Repair/Replacement</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="message"
+                    class="block text-gray-700 font-medium mb-1">Message</label>
+                  <textarea id="message" rows="4"
+                    placeholder="How can we help you?"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"></textarea>
+                </div>
+
+                <button type="submit"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-800 mb-4">Plumbing Tips &
+            News</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Helpful articles
+            about plumbing maintenance and common issues in Fort Myers</p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Blog Post 1 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/blog/frozen-pipes.png"
+                alt="Prevent frozen pipes" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span>October 15, 2023</span>
+                <span class="mx-2">•</span>
+                <span>5 min read</span>
+              </div>
+              <h3 class="text-xl font-bold text-blue-800 mb-3">How to Prevent
+                Frozen Pipes in Fort Myers Winters</h3>
+              <p class="text-gray-600 mb-4">While Fort Myers doesn't experience
+                extreme cold, occasional cold snaps can put your pipes at risk.
+                Learn how to protect your plumbing...</p>
+              <a href="#" class="text-blue-600 font-medium hover:underline">Read
+                More</a>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/blog/water-heater-maintenance.png"
+                alt="Water heater maintenance"
+                class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span>September 28, 2023</span>
+                <span class="mx-2">•</span>
+                <span>4 min read</span>
+              </div>
+              <h3 class="text-xl font-bold text-blue-800 mb-3">Signs Your Fort
+                Myers Water Heater Needs Replacement</h3>
+              <p class="text-gray-600 mb-4">Water heaters typically last 8-12
+                years in Southwest Florida's climate. Discover the warning signs
+                that indicate it's time for a new unit...</p>
+              <a href="#" class="text-blue-600 font-medium hover:underline">Read
+                More</a>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div
+            class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <div class="h-48 overflow-hidden">
+              <img
+                src="img/blog/drain-cleaning.png"
+                alt="Drain cleaning" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-2">
+                <span>August 15, 2023</span>
+                <span class="mx-2">•</span>
+                <span>6 min read</span>
+              </div>
+              <h3 class="text-xl font-bold text-blue-800 mb-3">The Truth About
+                Chemical Drain Cleaners in Fort Myers Homes</h3>
+              <p class="text-gray-600 mb-4">Many homeowners reach for chemical
+                drain cleaners, but these can cause more harm than good. Learn
+                safer alternatives for clearing clogs...</p>
+              <a href="#" class="text-blue-600 font-medium hover:underline">Read
+                More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-10">
+          <a href="#"
+            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+            View All Articles
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-blue-800 mb-4">Frequently Asked
+            Questions</h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Answers to common
+            plumbing questions from Fort Myers homeowners</p>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <!-- FAQ Item 1 -->
+          <div class="mb-4 border-b border-gray-200 pb-4">
+            <button
+              class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 hover:text-blue-600 focus:outline-none">
+              <span>What areas of Fort Myers do you serve?</span>
+              <i class="fas fa-plus text-blue-600"></i>
+            </button>
+            <div class="accordion-content mt-2 text-gray-700">
+              <p>We provide plumbing services throughout all of Fort Myers and
+                surrounding areas including Cape Coral, North Fort Myers, Lehigh
+                Acres, Estero, Bonita Springs, Sanibel, and Pine Island. Our
+                team is available 24/7 for emergency plumbing services across
+                Southwest Florida.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="mb-4 border-b border-gray-200 pb-4">
+            <button
+              class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 hover:text-blue-600 focus:outline-none">
+              <span>How quickly can you respond to a plumbing emergency?</span>
+              <i class="fas fa-plus text-blue-600"></i>
+            </button>
+            <div class="accordion-content mt-2 text-gray-700">
+              <p>For emergency plumbing situations like burst pipes, severe
+                leaks, or sewage backups, we typically respond within 1-2 hours
+                in the Fort Myers area. We have multiple teams on call 24/7 to
+                ensure fast response times when you need us most.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="mb-4 border-b border-gray-200 pb-4">
+            <button
+              class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 hover:text-blue-600 focus:outline-none">
+              <span>Do you offer free estimates for plumbing work?</span>
+              <i class="fas fa-plus text-blue-600"></i>
+            </button>
+            <div class="accordion-content mt-2 text-gray-700">
+              <p>Yes, we provide free, no-obligation estimates for all plumbing
+                services in Fort Myers. For emergency situations, we'll give you
+                an estimate before beginning any work. For non-emergency
+                projects, we can provide estimates over the phone or schedule an
+                in-home consultation.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="mb-4 border-b border-gray-200 pb-4">
+            <button
+              class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 hover:text-blue-600 focus:outline-none">
+              <span>What payment methods do you accept?</span>
+              <i class="fas fa-plus text-blue-600"></i>
+            </button>
+            <div class="accordion-content mt-2 text-gray-700">
+              <p>We accept all major credit cards (Visa, Mastercard, American
+                Express, Discover), checks, and cash. We also offer financing
+                options for larger plumbing projects in Fort Myers through
+                trusted third-party providers.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="mb-4 border-b border-gray-200 pb-4">
+            <button
+              class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 hover:text-blue-600 focus:outline-none">
+              <span>Are your plumbers licensed and insured?</span>
+              <i class="fas fa-plus text-blue-600"></i>
+            </button>
+            <div class="accordion-content mt-2 text-gray-700">
+              <p>Absolutely. All our plumbing technicians are fully licensed by
+                the state of Florida and carry comprehensive liability insurance
+                and workers' compensation coverage. We're proud to meet all
+                local Fort Myers licensing requirements to ensure your
+                protection.</p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="mb-4 border-b border-gray-200 pb-4">
+            <button
+              class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 hover:text-blue-600 focus:outline-none">
+              <span>What's included in your lifetime warranty?</span>
+              <i class="fas fa-plus text-blue-600"></i>
+            </button>
+            <div class="accordion-content mt-2 text-gray-700">
+              <p>Our lifetime warranty covers all parts and labor for repairs we
+                perform on your Fort Myers home's plumbing system. If any issue
+                recurs due to our workmanship, we'll repair it at no cost to
+                you. This doesn't cover new problems or damage caused by
+                neglect, but demonstrates our commitment to quality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center justify-center mb-12">
+          <img src="img/logo.webp" title="Plumbing Service 24 Inc"
+            alt="Plumbing Service 24 Inc Logo" class="h-48 w-48 mb-6">
+          <h3 class="text-3xl font-bold text-center">Plumbing Service 24
+            Inc</h3>
+          <p class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed &
+            insured plumbing services
+            for Fort Myers homes and businesses. Fast response and affordable
+            rates.</p>
+          <div class="flex space-x-6 mb-8">
+            <a href="#"
+              class="text-gray-400 hover:text-white transition-colors duration-300">
+              <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-white transition-colors duration-300">
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-white transition-colors duration-300">
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="#"
+              class="text-gray-400 hover:text-white transition-colors duration-300">
+              <i class="fab fa-linkedin-in text-2xl"></i>
+            </a>
+          </div>
+          <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+        </div>
+
+        <!-- Footer Links Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="#services"
+                  class="text-gray-400 hover:text-white transition">Services</a></li>
+              <li><a href="#about"
+                  class="text-gray-400 hover:text-white transition">About
+                  Us</a></li>
+              <li><a href="#projects"
+                  class="text-gray-400 hover:text-white transition">Projects</a></li>
+              <li><a href="#contact"
+                  class="text-gray-400 hover:text-white transition">Contact</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Blog</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Emergency
+                  Plumbing</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Drain
+                  Cleaning</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Water Heater
+                  Services</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Toilet
+                  Repair</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Pipe
+                  Repair</a></li>
+              <li><a href="#"
+                  class="text-gray-400 hover:text-white transition">Commercial
+                  Plumbing</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Contact</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt mt-1 mr-3 text-blue-600"></i>
+                <a href="tel:2392921993" class="hover:underline">(239)
+                  292-1993</a>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
+                <span>1165 Palm Avenue, Fort Myers, FL 33903</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3 text-blue-600"></i>
+                <a href="mailto:service@plumbing24service.com"
+                  class="hover:underline">service@plumbing24service.com</a>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clock mt-1 mr-3 text-blue-600"></i>
+                <div>
+                  <p>24/7 Emergency Service</p>
+                  <p class="text-blue-200 text-sm">Regular Hours: Mon-Sun 8 am-8
+                    pm</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>© 2025 Plumbing Service 24 Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button (positioned above call button on mobile) -->
+    <button id="back-to-top"
+      class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center">
+      <i class="fas fa-arrow-up text-3xl md:text-xl"></i>
+    </button>
+
+    <!-- Mobile Call Button (positioned at the bottom right corner) -->
+    <a href="tel:2392921993" id="mobile-call-button"
+      class="fixed bottom-10 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-lg z-50 hidden md:hidden flex items-center justify-center">
+      <i class="fas fa-phone-alt text-3xl"></i>
     </a>
-  </div>
 
-  <!-- Header scroll behavior -->
-  <script>
-    window.addEventListener("scroll", () => {
-      const header = document.getElementById("mainHeader");
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
+    <script>
+      // Accordion functionality
+      document.querySelectorAll('.accordion-btn').forEach(button => {
+          button.addEventListener('click', () => {
+              const accordionContent = button.nextElementSibling;
+              const icon = button.querySelector('i');
+              
+              button.classList.toggle('active');
+              accordionContent.classList.toggle('active');
+              
+              if (button.classList.contains('active')) {
+                  icon.classList.remove('fa-plus');
+                  icon.classList.add('fa-minus');
+              } else {
+                  icon.classList.remove('fa-minus');
+                  icon.classList.add('fa-plus');
+              }
+          });
+      });
+      
+      // Mobile Menu Toggle Functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+          
+          // Change icon based on menu state
+          const icon = mobileMenuButton.querySelector('i');
+          if (mobileMenu.classList.contains('hidden')) {
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+          } else {
+              icon.classList.remove('fa-bars');
+              icon.classList.add('fa-times');
+          }
+      });
+      
+      // Close mobile menu when clicking on a link
+      document.querySelectorAll('#mobile-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+              mobileMenu.classList.add('hidden');
+              const icon = mobileMenuButton.querySelector('i');
+              icon.classList.remove('fa-times');
+              icon.classList.add('fa-bars');
+          });
+      });
+      
+      // Back to Top Button functionality
+      const backToTopBtn = document.getElementById('back-to-top');
+      
+      // Show/hide button based on scroll position
+      window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+              backToTopBtn.classList.remove('scale-0', 'opacity-0');
+              backToTopBtn.classList.add('scale-100', 'opacity-100');
+          } else {
+              backToTopBtn.classList.remove('scale-100', 'opacity-100');
+              backToTopBtn.classList.add('scale-0', 'opacity-0');
+          }
+      });
+      
+      // Scroll to top with smooth behavior when button is clicked
+      backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({
+              top: 0,
+              behavior: 'smooth'
+          });
+      });
+      
+      // Mobile Call Button functionality
+      const mobileCallBtn = document.getElementById('mobile-call-button');
+      
+      // Only show on mobile devices
+      if (window.innerWidth < 768) {
+          mobileCallBtn.classList.remove('hidden');
       }
-    });
-
-    const menuButton = document.getElementById('menuButton');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuIcon = document.getElementById('menuIcon');
-    const closeIcon = document.getElementById('closeIcon');
-
-    menuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        menuIcon.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-    });
-  </script>
-</body>
+      
+      // Update visibility on window resize
+      window.addEventListener('resize', () => {
+          if (window.innerWidth < 768) {
+              mobileCallBtn.classList.remove('hidden');
+          } else {
+              mobileCallBtn.classList.add('hidden');
+          }
+      });
+    </script>
+  </body>
 </html>
