@@ -1,0 +1,44 @@
+html {
+    scroll-padding-top: 90px;
+    scroll-behavior: smooth;
+}
+
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg-mobile.webp');
+    }
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.before-after {
+    position: relative;
+    overflow: hidden;
+}
+
+.before-after img {
+    transition: all 0.3s ease;
+}
+
+.before-after:hover img {
+    transform: scale(1.05);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+}

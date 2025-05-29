@@ -6,48 +6,19 @@
     <title>Emergency Plumbing Service Fort Myers | Plumbing 24 Service Inc</title>
     <meta name="description"
       content="24/7 emergency plumbing services in Fort Myers. Licensed plumbers for repairs, installations, and maintenance. Same-day service with lifetime warranty. Call (239) 292-1993">
+    
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-    <style>
-        html {
-            scroll-padding-top: 90px;
-            scroll-behavior: smooth;
-        }
-        .hero {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg.webp');
-            background-size: cover;
-            background-position: center;
-        }
-        @media (max-width: 768px) {
-            .hero {
-                background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg-mobile.png');
-            }
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        .before-after {
-            position: relative;
-            overflow: hidden;
-        }
-        .before-after img {
-            transition: all 0.3s ease;
-        }
-        .before-after:hover img {
-            transform: scale(1.05);
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-        }
-        .accordion-content.active {
-            max-height: 500px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="font-sans">
     <!-- Top Bar -->
@@ -177,7 +148,8 @@
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
               </div>
               <div>
-                <select
+                <label for="hero-service" class="block text-gray-700 font-medium mb-1">Service Needed</label>
+                <select id="hero-service"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
                   <option>Select Service</option>
                   <option>Emergency Plumbing</option>
@@ -188,7 +160,8 @@
                 </select>
               </div>
               <div>
-                <textarea placeholder="Describe your plumbing issue"
+                <label for="hero-message" class="block text-gray-700 font-medium mb-1">Description</label>
+                <textarea id="hero-message" placeholder="Describe your plumbing issue"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"></textarea>
               </div>
               <button type="submit"
@@ -487,7 +460,7 @@
             class="before-after bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
             <div class="relative h-64 overflow-hidden">
               <img
-                src="img/gallery/tuyau-brille-sdb.jpg"
+                src="img/gallery/tuyau-brille-sdb.webp"
                 title="Burst pipe repair"
                 alt="Burst pipe repair" class="w-full h-full object-cover">
               <div
@@ -511,7 +484,7 @@
             class="before-after bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
             <div class="relative h-64 overflow-hidden">
               <img
-                src="img/gallery/grosse-machine-tuyau.jpg"
+                src="img/gallery/grosse-machine-tuyau.webp"
                 alt="Water heater installation"
                 title="Water heater installation"
                 class="w-full h-full object-cover">
@@ -536,7 +509,7 @@
             class="before-after bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
             <div class="relative h-64 overflow-hidden">
               <img
-                src="img/gallery/toilette-propre.jpg"
+                src="img/gallery/toilette-propre.webp"
                 title="Toilet repair and sanitization"
                 alt="Repaired clean toilet" class="w-full h-full object-cover">
               <div
@@ -572,7 +545,8 @@
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114103.1085181686!2d-81.8784536!3d26.640628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88db1a69f5d7833f%3A0x398e9e274d52e8a5!2sFort%20Myers%2C%20FL!5e0!3m2!1sen!2sus!4v1689871234567!5m2!1sen!2sus"
-            width="100%" height="450" style="border:0;" allowfullscreen
+            style="width: 100%;" height="450" style="border:0;" allowfullscreen
+            title="Google Map of Fort Myers Service Area"
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
@@ -759,7 +733,7 @@
           <!-- Blog Post 1 - Remplacer le contenu sur les tuyaux gelés par un contenu plus pertinent -->
           <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
             <div class="h-48 overflow-hidden">
-              <img src="img/blog/hurricane-prep.png"
+              <img src="img/blog/hurricane-prep.webp"
                 alt="Hurricane plumbing preparation" 
                 title="Preparing Your Plumbing System for Hurricane Season in Florida" 
                 class="w-full h-full object-cover">
@@ -781,7 +755,7 @@
             class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
             <div class="h-48 overflow-hidden">
               <img
-                src="img/blog/water-heater-maintenance.png"
+                src="img/blog/water-heater-maintenance.webp"
                 alt="Water heater maintenance"
                 title="Water Heater Maintenance Tips for Florida Homes" 
                 class="w-full h-full object-cover">
@@ -807,7 +781,7 @@
             class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
             <div class="h-48 overflow-hidden">
               <img
-                src="img/blog/drain-cleaning.png"
+                src="img/blog/drain-cleaning.webp"
                 alt="Drain cleaning" 
                 title="Professional Drain Cleaning Methods vs. Chemical Cleaners" 
                 class="w-full h-full object-cover">
@@ -1016,92 +990,6 @@
       <i class="fas fa-phone-alt text-3xl"></i>
     </a>
 
-    <script>
-      // Accordion functionality
-      document.querySelectorAll('.accordion-btn').forEach(button => {
-          button.addEventListener('click', () => {
-              const accordionContent = button.nextElementSibling;
-              const icon = button.querySelector('i');
-              
-              button.classList.toggle('active');
-              accordionContent.classList.toggle('active');
-              
-              if (button.classList.contains('active')) {
-                  icon.classList.remove('fa-plus');
-                  icon.classList.add('fa-minus');
-              } else {
-                  icon.classList.remove('fa-minus');
-                  icon.classList.add('fa-plus');
-              }
-          });
-      });
-      
-      // Mobile Menu Toggle Functionality
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      
-      mobileMenuButton.addEventListener('click', () => {
-          mobileMenu.classList.toggle('hidden');
-          
-          // Change icon based on menu state
-          const icon = mobileMenuButton.querySelector('i');
-          if (mobileMenu.classList.contains('hidden')) {
-              icon.classList.remove('fa-times');
-              icon.classList.add('fa-bars');
-          } else {
-              icon.classList.remove('fa-bars');
-              icon.classList.add('fa-times');
-          }
-      });
-      
-      // Close mobile menu when clicking on a link
-      document.querySelectorAll('#mobile-menu a').forEach(link => {
-          link.addEventListener('click', () => {
-              mobileMenu.classList.add('hidden');
-              const icon = mobileMenuButton.querySelector('i');
-              icon.classList.remove('fa-times');
-              icon.classList.add('fa-bars');
-          });
-      });
-      
-      // Back to Top Button functionality
-      const backToTopBtn = document.getElementById('back-to-top');
-      
-      // Show/hide button based on scroll position
-      window.addEventListener('scroll', () => {
-          if (window.pageYOffset > 300) {
-              backToTopBtn.classList.remove('scale-0', 'opacity-0');
-              backToTopBtn.classList.add('scale-100', 'opacity-100');
-          } else {
-              backToTopBtn.classList.remove('scale-100', 'opacity-100');
-              backToTopBtn.classList.add('scale-0', 'opacity-0');
-          }
-      });
-      
-      // Scroll to top with smooth behavior when button is clicked
-      backToTopBtn.addEventListener('click', () => {
-          window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-          });
-      });
-      
-      // Mobile Call Button functionality
-      const mobileCallBtn = document.getElementById('mobile-call-button');
-      
-      // Only show on mobile devices
-      if (window.innerWidth < 768) {
-          mobileCallBtn.classList.remove('hidden');
-      }
-      
-      // Update visibility on window resize
-      window.addEventListener('resize', () => {
-          if (window.innerWidth < 768) {
-              mobileCallBtn.classList.remove('hidden');
-          } else {
-              mobileCallBtn.classList.add('hidden');
-          }
-      });
-    </script>
+    <link rel="scripts" href="scripts.js">
   </body>
 </html>
