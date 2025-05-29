@@ -4,14 +4,15 @@ html {
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg.webp');
+    background-color: #1f3766;
+    background-image: none;
     background-size: cover;
     background-position: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .hero {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/hero-bg-mobile.webp');
+        background-position: top center;
     }
 }
 

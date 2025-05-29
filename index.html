@@ -8,8 +8,7 @@
       content="24/7 emergency plumbing services in Fort Myers. Licensed plumbers for repairs, installations, and maintenance. Same-day service with lifetime warranty. Call (239) 292-1993">
     
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://www.google.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <link rel="dns-prefetch" href="https://www.google.com">
@@ -19,6 +18,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    
+    <link rel="preload" as="image" href="img/hero-bg.webp" media="(min-width: 768px)" importance="high">
+    <link rel="preload" as="image" href="img/hero-mobile-bg.webp" media="(max-width: 767px)" importance="high">
+    
   </head>
   <body class="font-sans">
     <!-- Top Bar -->
@@ -93,15 +96,10 @@
 
     <!-- Hero Section -->
     <section class="hero text-white py-20 md:py-32">
-      <div
-        class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
         <div class="md:w-1/2 mb-10 md:mb-0">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6">Fast, Reliable
-            Plumbing Services in Fort Myers</h2>
-          <p class="text-xl mb-8">24/7 emergency plumbing services with same-day
-            response. Our licensed professionals deliver quality work with a
-            lifetime warranty.</p>
-          <!-- Hero Section CTAs -->
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">Fast, Reliable Plumbing Services in Fort Myers</h1>
+          <p class="text-xl mb-8">24/7 emergency plumbing services with same-day response. Our licensed professionals deliver quality work with a lifetime warranty.</p>
           <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <a href="tel:2392921993" title="Call Our 24/7 Emergency Plumbing Service"
               class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg text-center transition duration-300">
@@ -990,6 +988,6 @@
       <i class="fas fa-phone-alt text-3xl"></i>
     </a>
 
-    <link rel="scripts" href="scripts.js">
+    <script src="script.js"></script>
   </body>
 </html>
