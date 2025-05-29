@@ -6,13 +6,13 @@ html {
 .hero {
     background-color: #1f3766;
     background-image: none;
-    background-size: cover;
-    background-position: center;
 }
 
-@media (max-width: 767px) {
+@media (min-width: 768px) {
     .hero {
-        background-position: top center;
+        background-image: none;
+        background-size: cover;
+        background-position: center;
     }
 }
 

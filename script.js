@@ -1,16 +1,21 @@
-// Progressive image loading for hero section
+// Progressive image loading for hero section - modified for desktop only
 document.addEventListener('DOMContentLoaded', function () {
     const hero = document.querySelector('.hero');
     const isMobile = window.innerWidth < 768;
-    const imageUrl = isMobile ? 'img/hero-mobile-bg.webp' : 'img/hero-bg.webp';
-
-    // Create new image to preload
-    const img = new Image();
-    img.src = imageUrl;
-    img.onload = function () {
-        // Apply background only after image is loaded
-        hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imageUrl}')`;
-    };
+    
+    // Only load background image on desktop
+    if (!isMobile) {
+        const imageUrl = 'img/hero-bg.webp';
+        
+        // Create new image to preload
+        const img = new Image();
+        img.src = imageUrl;
+        img.onload = function () {
+            // Apply background only after image is loaded
+            hero.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('${imageUrl}')`;
+        };
+    }
+    // On mobile, keep the solid background color defined in CSS
 });
 
 // Accordion functionality
