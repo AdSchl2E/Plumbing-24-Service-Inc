@@ -1,0 +1,6 @@
+# Robots.txt for Plumbing 24 Service Inc
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://plumbing24service.com/sitemap.xml
