@@ -2,7 +2,7 @@
 title: 5 Signs Your Water Heater Needs Immediate Attention
 slug: water-heater-warning-signs
 date: 2025-06-15
-author: John Miller
+author: Plumbing 24 Service Inc
 category: Maintenance
 image: water-heater-warning-signs.webp
 excerpt: Learn the critical warning signs that your water heater is failing and what steps you should take to avoid costly emergencies and water damage in your Fort Myers home.

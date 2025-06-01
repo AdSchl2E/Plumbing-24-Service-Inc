@@ -18,6 +18,17 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
+        
+        <!-- Add this in the head section -->
+        <style>
+  .blog-card {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .category-filter {
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  }
+</style>
     </head>
     <body class="font-sans">
         <!-- Top Bar -->
@@ -117,24 +128,51 @@
                     <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
                 </div>
 
+                <!-- After the title section, add this category filter UI -->
+                <div class="container mx-auto px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-sm p-4">
+                        <h2 class="text-lg font-bold text-blue-800 mb-3">Filter by Category</h2>
+                        <div class="flex flex-wrap gap-2" id="category-filters">
+                            <button class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" data-category="all">
+                                All Categories
+                            </button>
+                            
+    <button class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition" data-category="Maintenance">
+        Maintenance
+    </button>
+  
+                        </div>
+                    </div>
+                </div>
+
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-  <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
-    <div class="h-48 overflow-hidden">
-      <img src="img/blog/water-heater-warning-signs.webp" alt="5 Signs Your Water Heater Needs Immediate Attention" title="5 Signs Your Water Heater Needs Immediate Attention" class="w-full h-full object-cover">
-    </div>
-    <div class="p-6">
-      <div class="flex items-center text-sm text-gray-500 mb-2">
-        <span>Sun Jun 15 2025 02:00:00 GMT+0200 (heure d’été d’Europe centrale)</span>
-        <span class="mx-2">•</span>
-        <span>Maintenance</span>
+  <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Maintenance">
+    <a href="blogs/water-heater-warning-signs.html" class="block">
+      <div class="h-48 overflow-hidden">
+        <img src="img/blog/water-heater-warning-signs.webp" 
+          alt="5 Signs Your Water Heater Needs Immediate Attention" 
+          title="5 Signs Your Water Heater Needs Immediate Attention" 
+          class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
       </div>
-      <h3 class="text-xl font-bold text-blue-800 mb-3">5 Signs Your Water Heater Needs Immediate Attention</h3>
-      <p class="text-gray-600 mb-4">Learn the critical warning signs that your water heater is failing and what steps you should take to avoid costly emergencies and water damage in your Fort Myers home.</p>
-      <a href="blogs/water-heater-warning-signs.html" title="Read Full Article" class="text-blue-600 font-medium hover:underline">
-        Read More
+    </a>
+    <div class="p-6">
+      <div class="flex items-center text-sm text-gray-500 mb-3">
+        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Maintenance</span>
+        <span class="mx-2">•</span>
+        <span>June 15, 2025</span>
+      </div>
+      <a href="blogs/water-heater-warning-signs.html" class="block">
+        <h3 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">5 Signs Your Water Heater Needs Immediate Attention</h3>
       </a>
+      <p class="text-gray-600 mb-4">Learn the critical warning signs that your water heater is failing and what steps you should take to avoid costly emergencies and water damage in your Fort Myers home.</p>
+      <div class="flex items-center justify-between">
+        <a href="blogs/water-heater-warning-signs.html" class="text-blue-600 font-medium hover:underline">
+          Read More <i class="fas fa-arrow-right ml-1 text-sm"></i>
+        </a>
+        <span class="text-sm text-gray-500">8 min read</span>
+      </div>
     </div>
   </div>
                 </div>
@@ -312,5 +350,48 @@
 
         <!-- Scripts -->
         <script src="../scripts/script.js"></script>
+        <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('.category-filter');
+  const blogCards = document.querySelectorAll('.blog-card');
+  
+  // Add click event to each filter button
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove active class from all buttons
+      filterButtons.forEach(btn => {
+        btn.classList.remove('bg-blue-600', 'text-white');
+        btn.classList.add('bg-gray-200', 'text-gray-800');
+      });
+      
+      // Add active class to clicked button
+      this.classList.remove('bg-gray-200', 'text-gray-800');
+      this.classList.add('bg-blue-600', 'text-white');
+      
+      // Get selected category
+      const selectedCategory = this.getAttribute('data-category');
+      
+      // Filter blog cards
+      blogCards.forEach(card => {
+        if (selectedCategory === 'all' || card.getAttribute('data-category') === selectedCategory) {
+          card.style.display = 'block';
+          // Animate the card back in
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 10);
+        } else {
+          // Animate the card out
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+});
+</script>
     </body>
 </html>
