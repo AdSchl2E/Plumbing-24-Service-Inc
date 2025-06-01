@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
-const marked = require('marked');
+const { marked } = require('marked');
 
 // Chemins des répertoires
 const sourceDir = path.join(__dirname, '../_blog');
