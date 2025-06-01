@@ -1,7 +1,7 @@
 ---
 title: 5 Signs Your Water Heater Needs Immediate Attention
 slug: water-heater-warning-signs
-date: 2025-06-15
+date: 2025-06-01
 author: Plumbing 24 Service Inc
 category: Maintenance
 image: water-heater-warning-signs.webp

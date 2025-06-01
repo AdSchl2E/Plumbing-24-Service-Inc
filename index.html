@@ -55,15 +55,15 @@
             Inc</h1>
         </div>
         <nav class="hidden md:flex space-x-8">
-          <a href="#services" title="Explore Our Professional Plumbing Services"
-            class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
           <a href="#about" title="Learn About Our Plumbing Company"
             class="text-blue-800 hover:text-blue-600 font-medium">About Us</a>
+          <a href="#services" title="Explore Our Professional Plumbing Services"
+            class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
           <a href="#projects" title="View Our Recent Plumbing Projects"
             class="text-blue-800 hover:text-blue-600 font-medium">Projects</a>
           <a href="#contact" title="Contact Our Plumbing Experts"
             class="text-blue-800 hover:text-blue-600 font-medium">Contact</a>
-          <a href="#blog" title="Plumbing Tips and Expert Advice"
+          <a href="blogs.html" title="Plumbing Tips and Expert Advice"
             class="text-blue-800 hover:text-blue-600 font-medium">Blog</a>
           <a href="#faq" title="Common Plumbing Questions Answered"
             class="text-blue-800 hover:text-blue-600 font-medium">FAQ</a>
@@ -78,17 +78,17 @@
         class="hidden bg-white w-full border-t border-gray-200 md:hidden">
         <div class="container mx-auto px-4 py-4">
           <nav class="flex flex-col space-y-4">
-            <a href="#services" title="Our Professional Plumbing Services"
-              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Services</a>
             <a href="#about" title="About Our Licensed Plumbing Company"
               class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">About
               Us</a>
+            <a href="#services" title="Our Professional Plumbing Services"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Services</a>
             <a href="#projects"
               title="View Our Recent Plumbing Work in Fort Myers"
               class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Projects</a>
             <a href="#contact" title="Contact Us for Plumbing Services"
               class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact</a>
-            <a href="#blog" title="Plumbing Tips and Articles"
+            <a href="blogs.html" title="Plumbing Tips and Articles"
               class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Blog</a>
             <a href="#faq" title="Answers to Common Plumbing Questions"
               class="text-blue-800 hover:text-blue-600 font-medium py-2">FAQ</a>
@@ -799,6 +799,34 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
           <!-- Blog Post -->
+          <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Plumbing Safety">
+    <a href="blogs/backflow-prevention-importance.html" class="block">
+      <div class="h-48 overflow-hidden">
+        <img src="img/blog/default-plumbing.webp" 
+          alt="The Importance of Backflow Prevention in Fort Myers Plumbing" 
+          title="The Importance of Backflow Prevention in Fort Myers Plumbing" 
+          class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+      </div>
+    </a>
+    <div class="p-6">
+      <div class="flex items-center text-sm text-gray-500 mb-3">
+        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Plumbing Safety</span>
+        <span class="mx-2">•</span>
+        <span>July 1, 2025</span>
+      </div>
+      <a href="blogs/backflow-prevention-importance.html" class="block">
+        <h3 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">The Importance of Backflow Prevention in Fort Myers Plumbing</h3>
+      </a>
+      <p class="text-gray-600 mb-4">Backflow prevention is crucial for safeguarding your home’s water supply. Learn what backflow is, why it’s a concern in Fort Myers, and how a professional plumber can help.</p>
+      <div class="flex items-center justify-between">
+        <a href="blogs/backflow-prevention-importance.html" class="text-blue-600 font-medium hover:underline">
+          Read More <i class="fas fa-arrow-right ml-1 text-sm"></i>
+        </a>
+        <span class="text-sm text-gray-500">7 min read</span>
+      </div>
+    </div>
+  </div>
+          <!-- Blog Post -->
           <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Maintenance">
     <a href="blogs/water-heater-warning-signs.html" class="block">
       <div class="h-48 overflow-hidden">
@@ -812,7 +840,7 @@
       <div class="flex items-center text-sm text-gray-500 mb-3">
         <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Maintenance</span>
         <span class="mx-2">•</span>
-        <span>June 15, 2025</span>
+        <span>June 1, 2025</span>
       </div>
       <a href="blogs/water-heater-warning-signs.html" class="block">
         <h3 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">5 Signs Your Water Heater Needs Immediate Attention</h3>
@@ -825,13 +853,14 @@
         <span class="text-sm text-gray-500">8 min read</span>
       </div>
     </div>
-  </div>
+  </div></div>
         <div class="text-center mt-10">
-          <a href="blogs.html"
-            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-            title="View All Plumbing Articles">
-            View All Articles
-          </a>
+            <a href="blogs.html"
+              class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+              title="View All Plumbing Articles">
+              View All Articles
+            </a>
+          </div>
         </div>
       </section>
 
@@ -841,7 +870,8 @@
           <div class="text-center mb-12">
             <h2 class="text-3xl font-bold text-blue-800 mb-4">Frequently Asked
               Questions</h2>
-            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Answers to common
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Answers to
+              common
               plumbing questions from Fort Myers homeowners</p>
             <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
           </div>
@@ -858,7 +888,8 @@
                 </button>
                 <div class="accordion-content bg-white px-4">
                   <p class="text-gray-700 py-4">We provide plumbing services
-                    throughout all of Fort Myers and surrounding areas including
+                    throughout all of Fort Myers and surrounding areas
+                    including
                     Cape Coral, North Fort Myers, Lehigh Acres, Estero, Bonita
                     Springs, Sanibel, and Pine Island. Our team is available
                     24/7
@@ -897,7 +928,8 @@
                 <div class="accordion-content bg-white px-4">
                   <p class="text-gray-700 py-4">Yes, we provide free,
                     no-obligation estimates for all plumbing services in Fort
-                    Myers. For emergency situations, we'll give you an estimate
+                    Myers. For emergency situations, we'll give you an
+                    estimate
                     before beginning any work. For non-emergency projects, we
                     can
                     provide estimates over the phone or schedule an in-home
@@ -913,8 +945,10 @@
                   <i class="fas fa-plus text-blue-600"></i>
                 </button>
                 <div class="accordion-content bg-white px-4">
-                  <p class="text-gray-700 py-4">We accept all major credit cards
-                    (Visa, Mastercard, American Express, Discover), checks, and
+                  <p class="text-gray-700 py-4">We accept all major credit
+                    cards
+                    (Visa, Mastercard, American Express, Discover), checks,
+                    and
                     cash. We also offer financing options for larger plumbing
                     projects in Fort Myers through trusted third-party
                     providers.</p>
@@ -933,7 +967,8 @@
                     technicians are fully licensed by the state of Florida and
                     carry comprehensive liability insurance and workers'
                     compensation coverage. We're proud to meet all local Fort
-                    Myers licensing requirements to ensure your protection.</p>
+                    Myers licensing requirements to ensure your
+                    protection.</p>
                 </div>
               </div>
 
@@ -945,10 +980,12 @@
                   <i class="fas fa-plus text-blue-600"></i>
                 </button>
                 <div class="accordion-content bg-white px-4">
-                  <p class="text-gray-700 py-4">Our lifetime warranty covers all
+                  <p class="text-gray-700 py-4">Our lifetime warranty covers
+                    all
                     parts and labor for repairs we perform on your Fort Myers
                     home's plumbing system. If any issue recurs due to our
-                    workmanship, we'll repair it at no cost to you. This doesn't
+                    workmanship, we'll repair it at no cost to you. This
+                    doesn't
                     cover new problems or damage caused by neglect, but
                     demonstrates our commitment to quality.</p>
                 </div>
@@ -967,7 +1004,8 @@
               alt="Plumbing 24 Service Inc Logo" class="h-48 w-48 mb-6">
             <h3 class="text-3xl font-bold text-center">Plumbing 24 Service
               Inc</h3>
-            <p class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed &
+            <p class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed
+              &
               insured plumbing services #CFC057988
               for Fort Myers homes and businesses. <br>Fast response and
               affordable
@@ -1023,7 +1061,7 @@
                 <li><a href="#contact"
                     class="text-gray-400 hover:text-white transition"
                     title="Get in Touch with Plumbing 24 Service Inc">Contact</a></li>
-                <li><a href="#blog"
+                <li><a href="blogs.html"
                     class="text-gray-400 hover:text-white transition"
                     title="Read Our Plumbing Tips and News">Blog</a></li>
                 <li><a href="#faq"
@@ -1075,7 +1113,8 @@
                     (239) 292-1993</a>
                 </li>
                 <li class="flex items-start">
-                  <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
+                  <i
+                    class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
                   <span>1165 Palm Avenue, Fort Myers, FL 33903</span>
                 </li>
                 <li class="flex items-start">

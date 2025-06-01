@@ -35,13 +35,23 @@ fs.readdirSync(sourceDir).forEach(filename => {
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const { data, content } = matter(fileContent);
 
-  // Si aucune image n'est spécifiée, utilisez le slug comme nom d'image
-  if (!data.image) {
+  // Check if image exists, regardless if it was specified or not
+  if (data.image) {
+    // If image is specified, verify it exists
+    const specifiedImagePath = path.join(__dirname, '../img/blog', data.image);
+    if (!fs.existsSync(specifiedImagePath)) {
+      // If specified image doesn't exist, fall back to default
+      console.log(`Warning: Image ${data.image} not found for ${data.title}, using default`);
+      data.image = 'default-plumbing.webp';
+    }
+  } else {
+    // No image specified, try using slug as filename
     data.image = `${data.slug}.webp`;
-
-    // Vérifier si l'image existe, sinon utiliser une image par défaut
-    const imagePath = path.join(__dirname, '../img/blog', data.image);
-    if (!fs.existsSync(imagePath)) {
+    
+    // Check if slug-named image exists
+    const slugImagePath = path.join(__dirname, '../img/blog', data.image);
+    if (!fs.existsSync(slugImagePath)) {
+      console.log(`No image found for ${data.title}, using default`);
       data.image = 'default-plumbing.webp';
     }
   }
@@ -380,6 +390,8 @@ const homePageBlogSection = () => {
   </div>`;
   });
 
+  homeBlogCards += `</div>`;
+
   return homeBlogCards;
 };
 
@@ -425,5 +437,3 @@ try {
 } catch (err) {
   console.error('Error updating index.html:', err);
 }
-
-console.log(`Blog generation complete: ${posts.length} articles processed.`);
