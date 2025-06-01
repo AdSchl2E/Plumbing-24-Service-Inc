@@ -18,7 +18,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
-        
+
         <!-- Add this in the head section -->
         <style>
   .blog-card {
@@ -64,13 +64,13 @@
                         Inc</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="index.html#services"
-                        title="Explore Our Professional Plumbing Services"
-                        class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
                     <a href="index.html#about"
                         title="Learn About Our Plumbing Company"
                         class="text-blue-800 hover:text-blue-600 font-medium">About
                         Us</a>
+                    <a href="index.html#services"
+                        title="Explore Our Professional Plumbing Services"
+                        class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
                     <a href="index.html#projects"
                         title="View Our Recent Plumbing Projects"
                         class="text-blue-800 hover:text-blue-600 font-medium">Projects</a>
@@ -131,9 +131,12 @@
                 <!-- After the title section, add this category filter UI -->
                 <div class="container mx-auto px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-sm p-4">
-                        <h2 class="text-lg font-bold text-blue-800 mb-3">Filter by Category</h2>
+                        <h2 class="text-lg font-bold text-blue-800 mb-3">Filter
+                            by Category</h2>
                         <div class="flex flex-wrap gap-2" id="category-filters">
-                            <button class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" data-category="all">
+                            <button
+                                class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                                data-category="all">
                                 All Categories
                             </button>
                             
@@ -153,7 +156,7 @@
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
   <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Plumbing Safety">
-    <a href="blogs/backflow-prevention-importance.html" class="block">
+    <a href="blogs/backflow-prevention-importance.html" class="block" aria-label="Read article: The Importance of Backflow Prevention in Fort Myers Plumbing">
       <div class="h-48 overflow-hidden">
         <img src="img/blog/default-plumbing.webp" 
           alt="The Importance of Backflow Prevention in Fort Myers Plumbing" 
@@ -172,15 +175,16 @@
       </a>
       <p class="text-gray-600 mb-4">Backflow prevention is crucial for safeguarding your home’s water supply. Learn what backflow is, why it’s a concern in Fort Myers, and how a professional plumber can help.</p>
       <div class="flex items-center justify-between">
-        <a href="blogs/backflow-prevention-importance.html" class="text-blue-600 font-medium hover:underline">
-          Read More <i class="fas fa-arrow-right ml-1 text-sm"></i>
+        <a href="blogs/backflow-prevention-importance.html" class="text-blue-600 font-medium hover:underline" 
+           aria-label="Read full article about the importance of backflow prevention in fort myers plumbing">
+          Read about the importance of ba... <i class="fas fa-arrow-right ml-1 text-sm"></i>
         </a>
         <span class="text-sm text-gray-500">7 min read</span>
       </div>
     </div>
   </div>
   <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Maintenance">
-    <a href="blogs/water-heater-warning-signs.html" class="block">
+    <a href="blogs/water-heater-warning-signs.html" class="block" aria-label="Read article: 5 Signs Your Water Heater Needs Immediate Attention">
       <div class="h-48 overflow-hidden">
         <img src="img/blog/water-heater-warning-signs.webp" 
           alt="5 Signs Your Water Heater Needs Immediate Attention" 
@@ -199,8 +203,9 @@
       </a>
       <p class="text-gray-600 mb-4">Learn the critical warning signs that your water heater is failing and what steps you should take to avoid costly emergencies and water damage in your Fort Myers home.</p>
       <div class="flex items-center justify-between">
-        <a href="blogs/water-heater-warning-signs.html" class="text-blue-600 font-medium hover:underline">
-          Read More <i class="fas fa-arrow-right ml-1 text-sm"></i>
+        <a href="blogs/water-heater-warning-signs.html" class="text-blue-600 font-medium hover:underline" 
+           aria-label="Read full article about 5 signs your water heater needs immediate attention">
+          Read about 5 signs your water h... <i class="fas fa-arrow-right ml-1 text-sm"></i>
         </a>
         <span class="text-sm text-gray-500">8 min read</span>
       </div>

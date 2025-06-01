@@ -18,7 +18,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
         <link rel="stylesheet" href="style.css">
-        
+
         <!-- Add this in the head section -->
         <style>
   .blog-card {
@@ -64,13 +64,13 @@
                         Inc</h1>
                 </div>
                 <nav class="hidden md:flex space-x-8">
-                    <a href="index.html#services"
-                        title="Explore Our Professional Plumbing Services"
-                        class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
                     <a href="index.html#about"
                         title="Learn About Our Plumbing Company"
                         class="text-blue-800 hover:text-blue-600 font-medium">About
                         Us</a>
+                    <a href="index.html#services"
+                        title="Explore Our Professional Plumbing Services"
+                        class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
                     <a href="index.html#projects"
                         title="View Our Recent Plumbing Projects"
                         class="text-blue-800 hover:text-blue-600 font-medium">Projects</a>
@@ -131,9 +131,12 @@
                 <!-- After the title section, add this category filter UI -->
                 <div class="container mx-auto px-4 mb-8">
                     <div class="bg-white rounded-lg shadow-sm p-4">
-                        <h2 class="text-lg font-bold text-blue-800 mb-3">Filter by Category</h2>
+                        <h2 class="text-lg font-bold text-blue-800 mb-3">Filter
+                            by Category</h2>
                         <div class="flex flex-wrap gap-2" id="category-filters">
-                            <button class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition" data-category="all">
+                            <button
+                                class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                                data-category="all">
                                 All Categories
                             </button>
                             {{categoryButtons}}

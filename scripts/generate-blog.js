@@ -243,7 +243,8 @@ posts.forEach(post => {
             <h3 class="font-bold text-blue-800 mb-2 hover:text-blue-600 transition">${related.title}</h3>
           </a>
           <p class="text-gray-600 text-sm mb-2">${related.excerpt.substring(0, 80)}...</p>
-          <a href="${related.slug}.html" class="text-blue-600 hover:underline text-sm">Read more</a>
+          <a href="${related.slug}.html" class="text-blue-600 hover:underline text-sm" 
+             aria-label="Read full article about ${related.title.toLowerCase()}">Read about ${related.title.toLowerCase().substring(0, 30)}${related.title.length > 30 ? '...' : ''}</a>
         </div>
       </div>`;
     }
@@ -309,7 +310,7 @@ posts.forEach(post => {
 
   blogCards += `
   <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="${post.category}">
-    <a href="blogs/${post.slug}.html" class="block">
+    <a href="blogs/${post.slug}.html" class="block" aria-label="Read article: ${post.title}">
       <div class="h-48 overflow-hidden">
         <img src="img/blog/${post.image}" 
           alt="${post.title}" 
@@ -328,8 +329,9 @@ posts.forEach(post => {
       </a>
       <p class="text-gray-600 mb-4">${post.excerpt}</p>
       <div class="flex items-center justify-between">
-        <a href="blogs/${post.slug}.html" class="text-blue-600 font-medium hover:underline">
-          Read More <i class="fas fa-arrow-right ml-1 text-sm"></i>
+        <a href="blogs/${post.slug}.html" class="text-blue-600 font-medium hover:underline" 
+           aria-label="Read full article about ${post.title.toLowerCase()}">
+          Read about ${post.title.toLowerCase().substring(0, 20)}${post.title.length > 20 ? '...' : ''} <i class="fas fa-arrow-right ml-1 text-sm"></i>
         </a>
         <span class="text-sm text-gray-500">${post.readTime} min read</span>
       </div>
@@ -362,7 +364,7 @@ const homePageBlogSection = () => {
     homeBlogCards += `
           <!-- Blog Post -->
           <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="${post.category}">
-    <a href="blogs/${post.slug}.html" class="block">
+    <a href="blogs/${post.slug}.html" class="block" aria-label="Read article: ${post.title}">
       <div class="h-48 overflow-hidden">
         <img src="img/blog/${post.image}" 
           alt="${post.title}" 
@@ -381,8 +383,9 @@ const homePageBlogSection = () => {
       </a>
       <p class="text-gray-600 mb-4">${post.excerpt}</p>
       <div class="flex items-center justify-between">
-        <a href="blogs/${post.slug}.html" class="text-blue-600 font-medium hover:underline">
-          Read More <i class="fas fa-arrow-right ml-1 text-sm"></i>
+        <a href="blogs/${post.slug}.html" class="text-blue-600 font-medium hover:underline"
+           aria-label="Learn more about ${post.title.toLowerCase()}">
+          Learn about ${post.category} tips <i class="fas fa-arrow-right ml-1 text-sm"></i>
         </a>
         <span class="text-sm text-gray-500">${post.readTime} min read</span>
       </div>
