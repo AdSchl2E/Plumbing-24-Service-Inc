@@ -186,8 +186,8 @@ posts.forEach(post => {
   // Replace template placeholders with English content
   let postHtml = blogTemplate
     // Fix title and meta tags
-    .replace(/ARTICLE \|_TITLE/g, `${post.title} |`)
-    .replace(/alt="ARTICLE" _TITLE/g, `alt="${post.title}"`)
+    .replace(/ARTICLE_TITLE/g, `${post.title}`)
+    .replace(/alt="ARTICLE_TITLE"/g, `alt="${post.title}"`)
     .replace(/<h1 class="text-3xl font-bold text-blue-800 mb-4">ARTICLE<\/_TITLEh1>/g,
       `<h1 class="text-3xl font-bold text-blue-800 mb-4">${post.title}</h1>`)
 
