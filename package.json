@@ -1,0 +1,12 @@
+{
+  "name": "plumbing-24-service-blog",
+  "version": "1.0.0",
+  "description": "Blog generator for Plumbing 24 Service Inc website",
+  "scripts": {
+    "generate": "node scripts/generate-blog.js"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "marked": "^4.3.0"
+  }
+}

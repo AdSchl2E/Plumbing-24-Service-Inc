@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plumbing Tips & Blog | Plumbing 24 Service Inc Fort Myers</title>
+    <meta name="description"
+      content="Expert plumbing advice, maintenance tips, and industry insights for Fort Myers homeowners. Learn about water heaters, hurricane preparation, drain cleaning and more.">
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="font-sans">
+    <!-- Top Bar -->
+    <div class="bg-blue-800 text-white py-2 px-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center space-x-4">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:2392921993" class="font-bold text-lg"
+            title="Call Our 24/7 Emergency Plumbing Service">
+            (239) 292-1993
+          </a>
+        </div>
+        <div class="hidden md:flex space-x-4">
+          <span class="text-sm">24/7 Emergency Service</span>
+          <span class="text-sm">Licensed & Insured #CFC057988</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="index.html">
+            <img src="img/logo.webp"
+              alt="Plumbing 24 Service Inc Logo"
+              title="24/7 Plumbing Service in Fort Myers"
+              class="h-16 w-16 mr-4">
+          </a>
+          <h1 class="text-2xl font-bold text-blue-800">Plumbing 24 Service
+            Inc</h1>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="index.html#services" title="Explore Our Professional Plumbing Services"
+            class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
+          <a href="index.html#about" title="Learn About Our Plumbing Company"
+            class="text-blue-800 hover:text-blue-600 font-medium">About Us</a>
+          <a href="index.html#projects" title="View Our Recent Plumbing Projects"
+            class="text-blue-800 hover:text-blue-600 font-medium">Projects</a>
+          <a href="index.html#contact" title="Contact Our Plumbing Experts"
+            class="text-blue-800 hover:text-blue-600 font-medium">Contact</a>
+          <a href="blogs.html" title="Plumbing Tips and Expert Advice"
+            class="text-blue-800 hover:text-blue-600 font-medium border-b-2 border-blue-600">Blog</a>
+          <a href="index.html#faq" title="Common Plumbing Questions Answered"
+            class="text-blue-800 hover:text-blue-600 font-medium">FAQ</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-blue-800">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu (hidden by default) -->
+      <div id="mobile-menu"
+        class="hidden bg-white w-full border-t border-gray-200 md:hidden">
+        <div class="container mx-auto px-4 py-4">
+          <nav class="flex flex-col space-y-4">
+            <a href="index.html#services" title="Our Professional Plumbing Services"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Services</a>
+            <a href="index.html#about" title="About Our Licensed Plumbing Company"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">About
+              Us</a>
+            <a href="index.html#projects"
+              title="View Our Recent Plumbing Work in Fort Myers"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Projects</a>
+            <a href="index.html#contact" title="Contact Us for Plumbing Services"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact</a>
+            <a href="blogs.html" title="Plumbing Tips and Articles"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Blog</a>
+            <a href="index.html#faq" title="Answers to Common Plumbing Questions"
+              class="text-blue-800 hover:text-blue-600 font-medium py-2">FAQ</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-blue-800 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl font-bold mb-4">Plumbing Tips & Insights</h1>
+          <p class="text-xl mb-6">Expert advice for Fort Myers homeowners on plumbing maintenance, repairs, and upgrades</p>
+          <div class="w-32 h-1 bg-white mx-auto"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Post Grid -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <!-- Filter/Categories (Optional) -->
+        <div class="flex flex-wrap items-center justify-center mb-12 gap-4">
+          <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium">All Posts</a>
+          <a href="#" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-medium">Tips & Advice</a>
+          <a href="#" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-medium">Emergency Plumbing</a>
+          <a href="#" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-medium">Water Heaters</a>
+          <a href="#" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-medium">Drain Cleaning</a>
+          <a href="#" class="bg-gray-200 hover:bg-gray-300 px-4 py-2 rounded-md text-sm font-medium">Hurricane Prep</a>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Blog Post 1 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <a href="blogs/blog-template.html" class="block">
+              <div class="h-56 overflow-hidden">
+                <img src="img/blog/hurricane-prep.webp"
+                  alt="Hurricane plumbing preparation"
+                  title="Preparing Your Plumbing System for Hurricane Season in Florida"
+                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+              </div>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Hurricane Prep</span>
+                <span class="mx-2">•</span>
+                <span>October 15, 2023</span>
+              </div>
+              <a href="blogs/blog-template.html" class="block">
+                <h2 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">Hurricane-Proof Your Plumbing: Essential Tips for Fort Myers Homes</h2>
+              </a>
+              <p class="text-gray-600 mb-4">Hurricane season in Southwest Florida can wreak havoc on your home's plumbing system. Learn how to prepare and protect your pipes before the next major storm hits to prevent costly damage and ensure your water systems stay operational.</p>
+              <div class="flex items-center justify-between">
+                <a href="blogs/blog-template.html"
+                  title="Read Full Article About Hurricane Plumbing Preparation"
+                  class="text-blue-600 font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                <span class="text-sm text-gray-500">5 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 2 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <a href="blogs/water-heater-replacement-signs.html" class="block">
+              <div class="h-56 overflow-hidden">
+                <img src="img/blog/water-heater-maintenance.webp"
+                  alt="Water heater maintenance"
+                  title="Water Heater Maintenance Tips for Florida Homes"
+                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+              </div>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Water Heaters</span>
+                <span class="mx-2">•</span>
+                <span>September 28, 2023</span>
+              </div>
+              <a href="blogs/water-heater-replacement-signs.html" class="block">
+                <h2 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">Signs Your Fort Myers Water Heater Needs Replacement</h2>
+              </a>
+              <p class="text-gray-600 mb-4">Water heaters typically last 8-12 years in Southwest Florida's climate. Discover the warning signs that indicate it's time for a new unit, from rusty water to rising energy bills and strange noises that shouldn't be ignored.</p>
+              <div class="flex items-center justify-between">
+                <a href="blogs/water-heater-replacement-signs.html" title="Learn About Water Heater Replacement Signs"
+                  class="text-blue-600 font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                <span class="text-sm text-gray-500">4 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 3 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <a href="blogs/chemical-drain-cleaner-dangers.html" class="block">
+              <div class="h-56 overflow-hidden">
+                <img src="img/blog/drain-cleaning.webp"
+                  alt="Drain cleaning"
+                  title="Professional Drain Cleaning Methods vs. Chemical Cleaners"
+                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+              </div>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Drain Cleaning</span>
+                <span class="mx-2">•</span>
+                <span>August 15, 2023</span>
+              </div>
+              <a href="blogs/chemical-drain-cleaner-dangers.html" class="block">
+                <h2 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">The Truth About Chemical Drain Cleaners in Fort Myers Homes</h2>
+              </a>
+              <p class="text-gray-600 mb-4">Many homeowners reach for chemical drain cleaners, but these can cause more harm than good. Learn safer alternatives for clearing clogs and why professional drain cleaning methods are better for your pipes and the environment.</p>
+              <div class="flex items-center justify-between">
+                <a href="blogs/chemical-drain-cleaner-dangers.html"
+                  title="Read Article About Safer Drain Cleaning Methods"
+                  class="text-blue-600 font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                <span class="text-sm text-gray-500">6 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 4 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <a href="blogs/toilet-repair-guide.html" class="block">
+              <div class="h-56 overflow-hidden">
+                <img src="img/blog/toilet-repair.webp"
+                  alt="Toilet repair"
+                  title="Common Toilet Problems and DIY Fixes"
+                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+              </div>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Repairs</span>
+                <span class="mx-2">•</span>
+                <span>July 22, 2023</span>
+              </div>
+              <a href="blogs/toilet-repair-guide.html" class="block">
+                <h2 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">DIY Toilet Repair Guide: Fix Common Problems in Fort Myers Homes</h2>
+              </a>
+              <p class="text-gray-600 mb-4">Running toilets, weak flushes, and leaks can waste water and increase your utility bills. Learn how to diagnose common toilet problems and which issues you can fix yourself versus when to call a professional plumber.</p>
+              <div class="flex items-center justify-between">
+                <a href="blogs/toilet-repair-guide.html"
+                  title="Learn About DIY Toilet Repairs"
+                  class="text-blue-600 font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                <span class="text-sm text-gray-500">7 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 5 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <a href="blogs/water-conservation-tips.html" class="block">
+              <div class="h-56 overflow-hidden">
+                <img src="img/blog/water-conservation.webp"
+                  alt="Water conservation"
+                  title="Water Conservation Tips for Florida Homeowners"
+                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+              </div>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Tips & Advice</span>
+                <span class="mx-2">•</span>
+                <span>June 10, 2023</span>
+              </div>
+              <a href="blogs/water-conservation-tips.html" class="block">
+                <h2 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">10 Water-Saving Plumbing Tips for Fort Myers Residents</h2>
+              </a>
+              <p class="text-gray-600 mb-4">Conserving water in Florida is not just environmentally responsible but can also significantly reduce your utility bills. Discover practical plumbing upgrades and habit changes that can help you save thousands of gallons annually.</p>
+              <div class="flex items-center justify-between">
+                <a href="blogs/water-conservation-tips.html"
+                  title="Read About Water Conservation Plumbing Tips"
+                  class="text-blue-600 font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                <span class="text-sm text-gray-500">5 min read</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Post 6 -->
+          <div class="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+            <a href="blogs/emergency-plumbing-prep.html" class="block">
+              <div class="h-56 overflow-hidden">
+                <img src="img/blog/emergency-kit.webp"
+                  alt="Emergency plumbing kit"
+                  title="Emergency Plumbing Preparation for Homeowners"
+                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+              </div>
+            </a>
+            <div class="p-6">
+              <div class="flex items-center text-sm text-gray-500 mb-3">
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Emergency Plumbing</span>
+                <span class="mx-2">•</span>
+                <span>May 18, 2023</span>
+              </div>
+              <a href="blogs/emergency-plumbing-prep.html" class="block">
+                <h2 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">Creating a Plumbing Emergency Kit for Your Fort Myers Home</h2>
+              </a>
+              <p class="text-gray-600 mb-4">Being prepared for plumbing emergencies can save you thousands in water damage. Learn what essential tools and supplies every Fort Myers homeowner should have on hand, and the steps to take before professional help arrives.</p>
+              <div class="flex items-center justify-between">
+                <a href="blogs/emergency-plumbing-prep.html"
+                  title="Learn How to Create a Plumbing Emergency Kit"
+                  class="text-blue-600 font-medium hover:underline">Read More <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
+                <span class="text-sm text-gray-500">4 min read</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+          <nav class="inline-flex rounded-md shadow">
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-l-md text-sm font-medium text-gray-500 hover:bg-gray-50">
+              Previous
+            </a>
+            <a href="#" class="py-2 px-4 bg-blue-600 border border-blue-600 text-sm font-medium text-white">
+              1
+            </a>
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50">
+              2
+            </a>
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-r-md text-sm font-medium text-gray-500 hover:bg-gray-50">
+              Next
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="py-16 bg-blue-800 text-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-4">Get Plumbing Tips in Your Inbox</h2>
+          <p class="text-xl mb-8">Subscribe to our monthly newsletter for expert plumbing advice, seasonal tips, and exclusive discounts</p>
+          
+          <form class="max-w-md mx-auto">
+            <div class="flex flex-col sm:flex-row gap-4">
+              <input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 rounded-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <button type="submit" class="bg-white text-blue-800 px-6 py-3 rounded-md font-bold hover:bg-gray-100 transition duration-300">
+                Subscribe
+              </button>
+            </div>
+            <p class="mt-3 text-sm text-blue-200">We respect your privacy. Unsubscribe at any time.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center justify-center mb-12">
+          <img src="img/logo.webp" title="Plumbing 24 Service Inc"
+            alt="Plumbing 24 Service Inc Logo" class="h-48 w-48 mb-6">
+          <h3 class="text-3xl font-bold text-center">Plumbing 24 Service
+            Inc</h3>
+          <p class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed &
+            insured plumbing services #CFC057988
+            for Fort Myers homes and businesses. <br>Fast response and
+            affordable
+            rates.</p>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/plumbing24serviceinc"
+              class="text-gray-400 hover:text-gray-200 transition"
+              title="Follow Plumbing 24 Service Inc on Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/plumbing24serviceinc"
+              class="text-gray-400 hover:text-gray-200 transition"
+              title="Follow Plumbing 24 Service Inc on Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/plumbing24serviceinc"
+              class="text-gray-400 hover:text-gray-200 transition"
+              title="Connect with Plumbing 24 Service Inc on LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.yelp.com/biz/plumbing-24-service-inc-fort-myers"
+              class="text-gray-400 hover:text-gray-200 transition"
+              title="View Plumbing 24 Service Inc on Yelp">
+              <i class="fab fa-yelp"></i>
+            </a>
+            <a
+              href="https://www.google.com/maps/place/Plumbing+24+Service+Inc/@26.640628,-81.8784536,12z"
+              class="text-gray-400 hover:text-gray-200 transition"
+              title="Find Plumbing 24 Service Inc on Google Maps">
+              <i class="fas fa-map-marker-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Links Section -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li><a href="index.html#services"
+                  class="text-gray-400 hover:text-white transition"
+                  title="View Our Plumbing Services">Plumbing
+                  Services</a></li>
+              <li><a href="index.html#about"
+                  class="text-gray-400 hover:text-white transition"
+                  title="Learn More About Plumbing 24 Service Inc">About
+                  Us</a></li>
+              <li><a href="index.html#projects"
+                  class="text-gray-400 hover:text-white transition"
+                  title="See Our Recent Plumbing Projects">Projects</a></li>
+              <li><a href="index.html#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  title="Get in Touch with Plumbing 24 Service Inc">Contact</a></li>
+              <li><a href="blogs.html"
+                  class="text-gray-400 hover:text-white transition"
+                  title="Read Our Plumbing Tips and News">Blog</a></li>
+              <li><a href="index.html#faq"
+                  class="text-gray-400 hover:text-white transition"
+                  title="Frequently Asked Questions">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Services</h3>
+            <ul class="space-y-3">
+              <li><a href="services/emergency-plumbing.html"
+                  title="Emergency Plumbing Services"
+                  class="text-gray-400 hover:text-white transition">Emergency
+                  Plumbing</a></li>
+              <li><a href="services/drain-cleaning.html"
+                  title="Drain Cleaning Services"
+                  class="text-gray-400 hover:text-white transition">Drain
+                  Cleaning</a></li>
+              <li><a href="services/water-heater-services.html"
+                  title="Water Heater Repair and Installation"
+                  class="text-gray-400 hover:text-white transition">Water Heater
+                  Services</a></li>
+              <li><a href="services/toilet-repair.html"
+                  title="Toilet Repair and Installation"
+                  class="text-gray-400 hover:text-white transition">Toilet
+                  Repair</a></li>
+              <li><a href="services/pipe-repair.html"
+                  title="Pipe Repair and Replacement"
+                  class="text-gray-400 hover:text-white transition">Pipe
+                  Repair</a></li>
+              <li><a href="services/commercial-plumbing.html"
+                  title="Commercial Plumbing Services"
+                  class="text-gray-400 hover:text-white transition">Commercial
+                  Plumbing</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <h3 class="text-xl font-bold mb-6">Contact</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt mt-1 mr-3 text-blue-600"></i>
+                <a href="tel:2392921993" class="hover:underline"
+                  title="Call Plumbing 24 Service Inc">
+                  (239) 292-1993</a>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
+                <span>1165 Palm Avenue, Fort Myers, FL 33903</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-3 text-blue-600"></i>
+                <a href="mailto:service@plumbing24service.com"
+                  title="Email Plumbing 24 Service Inc"
+                  class="hover:underline">service@plumbing24service.com</a>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clock mt-1 mr-3 text-blue-600"></i>
+                <div>
+                  <p>24/7 Emergency Service</p>
+                  <p class="text-blue-200 text-sm">Regular Hours: Mon-Sun 8 am-8
+                    pm</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+          <p>© 2025 Plumbing 24 Service Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky Buttons -->
+    <button id="back-to-top" title="Scroll Back to Top of Page"
+      class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center">
+      <i class="fas fa-arrow-up text-3xl md:text-xl"></i>
+    </button>
+
+    <a href="tel:2392921993" id="mobile-call-button"
+      title="Call Our Emergency Plumbing Service Now"
+      class="fixed bottom-10 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-lg z-50 hidden md:hidden flex items-center justify-center">
+      <i class="fas fa-phone-alt text-3xl"></i>
+    </a>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

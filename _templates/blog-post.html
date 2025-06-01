@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}} | Plumbing 24 Service Inc</title>
+        <meta name="description" content="{{excerpt}}">
+
+        <!-- Autres balises head de votre site -->
+        <link rel="preconnect" href="https://cdn.tailwindcss.com">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+        <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body class="font-sans">
+        <!-- Top Bar -->
+        <div class="bg-blue-800 text-white py-2 px-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:2392921993" class="font-bold text-lg"
+                        title="Call Our 24/7 Emergency Plumbing Service">
+                        (239) 292-1993
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-4">
+                    <span class="text-sm">24/7 Emergency Service</span>
+                    <span class="text-sm">Licensed & Insured #CFC057988</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Header -->
+        <header class="bg-white shadow-md sticky top-0 z-50">
+            <div
+                class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="img/logo.webp"
+                            alt="Plumbing 24 Service Inc Logo"
+                            title="24/7 Plumbing Service in Fort Myers"
+                            class="h-16 w-16 mr-4">
+                    </a>
+                    <h1 class="text-2xl font-bold text-blue-800">Plumbing 24
+                        Service
+                        Inc</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="index.html#services"
+                        title="Explore Our Professional Plumbing Services"
+                        class="text-blue-800 hover:text-blue-600 font-medium">Services</a>
+                    <a href="index.html#about"
+                        title="Learn About Our Plumbing Company"
+                        class="text-blue-800 hover:text-blue-600 font-medium">About
+                        Us</a>
+                    <a href="index.html#projects"
+                        title="View Our Recent Plumbing Projects"
+                        class="text-blue-800 hover:text-blue-600 font-medium">Projects</a>
+                    <a href="index.html#contact"
+                        title="Contact Our Plumbing Experts"
+                        class="text-blue-800 hover:text-blue-600 font-medium">Contact</a>
+                    <a href="blogs.html" title="Plumbing Tips and Expert Advice"
+                        class="text-blue-800 hover:text-blue-600 font-medium border-b-2 border-blue-600">Blog</a>
+                    <a href="index.html#faq"
+                        title="Common Plumbing Questions Answered"
+                        class="text-blue-800 hover:text-blue-600 font-medium">FAQ</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden text-blue-800">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu (hidden by default) -->
+            <div id="mobile-menu"
+                class="hidden bg-white w-full border-t border-gray-200 md:hidden">
+                <div class="container mx-auto px-4 py-4">
+                    <nav class="flex flex-col space-y-4">
+                        <a href="index.html#services"
+                            title="Our Professional Plumbing Services"
+                            class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Services</a>
+                        <a href="index.html#about"
+                            title="About Our Licensed Plumbing Company"
+                            class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">About
+                            Us</a>
+                        <a href="index.html#projects"
+                            title="View Our Recent Plumbing Work in Fort Myers"
+                            class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Projects</a>
+                        <a href="index.html#contact"
+                            title="Contact Us for Plumbing Services"
+                            class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Contact</a>
+                        <a href="blogs.html" title="Plumbing Tips and Articles"
+                            class="text-blue-800 hover:text-blue-600 font-medium py-2 border-b border-gray-100">Blog</a>
+                        <a href="index.html#faq"
+                            title="Answers to Common Plumbing Questions"
+                            class="text-blue-800 hover:text-blue-600 font-medium py-2">FAQ</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Article -->
+        <section class="py-16">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="mb-8">
+                        <img src="../img/blog/{{image}}" alt="{{title}}"
+                            class="w-full h-64 md:h-96 object-cover rounded-lg shadow-md">
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <div
+                            class="flex items-center text-sm text-gray-500 mb-4">
+                            <span>{{date}}</span>
+                            <span class="mx-2">•</span>
+                            <span>{{category}}</span>
+                            <span class="mx-2">•</span>
+                            <span>By {{author}}</span>
+                        </div>
+
+                        <h1
+                            class="text-3xl font-bold text-blue-800 mb-6">{{title}}</h1>
+
+                        <div class="prose prose-lg max-w-none text-gray-700">
+                            {{content}}
+                        </div>
+
+                        <div class="mt-12 pt-8 border-t border-gray-100">
+                            <a href="../blogs.html"
+                                class="flex items-center text-blue-600 font-medium hover:underline">
+                                <i class="fas fa-arrow-left mr-2"></i> Back to
+                                All Articles
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="mt-12 bg-blue-50 rounded-lg p-8 text-center">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-4">Need
+                            Professional Plumbing Help?</h3>
+                        <p class="text-gray-700 mb-6">Our expert plumbers in
+                            Fort Myers are ready to assist with any plumbing
+                            issue.</p>
+                        <div
+                            class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="tel:2392921993"
+                                class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                                <i class="fas fa-phone-alt mr-2"></i> Call (239)
+                                292-1993
+                            </a>
+                            <a href="../index.html#contact"
+                                class="bg-white hover:bg-gray-100 text-blue-800 border border-blue-600 font-bold py-3 px-6 rounded-lg transition duration-300">
+                                Request Free Estimate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white pt-16 pb-8">
+            <div class="container mx-auto px-4">
+                <!-- Logo Section -->
+                <div class="flex flex-col items-center justify-center mb-12">
+                    <img src="img/logo.webp" title="Plumbing 24 Service Inc"
+                        alt="Plumbing 24 Service Inc Logo"
+                        class="h-48 w-48 mb-6">
+                    <h3 class="text-3xl font-bold text-center">Plumbing 24
+                        Service
+                        Inc</h3>
+                    <p
+                        class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed
+                        &
+                        insured plumbing services #CFC057988
+                        for Fort Myers homes and businesses. <br>Fast response
+                        and
+                        affordable
+                        rates.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/plumbing24serviceinc"
+                            class="text-gray-400 hover:text-gray-200 transition"
+                            title="Follow Plumbing 24 Service Inc on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/plumbing24serviceinc"
+                            class="text-gray-400 hover:text-gray-200 transition"
+                            title="Follow Plumbing 24 Service Inc on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/plumbing24serviceinc"
+                            class="text-gray-400 hover:text-gray-200 transition"
+                            title="Connect with Plumbing 24 Service Inc on LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a
+                            href="https://www.yelp.com/biz/plumbing-24-service-inc-fort-myers"
+                            class="text-gray-400 hover:text-gray-200 transition"
+                            title="View Plumbing 24 Service Inc on Yelp">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                        <a
+                            href="https://www.google.com/maps/place/Plumbing+24+Service+Inc/@26.640628,-81.8784536,12z"
+                            class="text-gray-400 hover:text-gray-200 transition"
+                            title="Find Plumbing 24 Service Inc on Google Maps">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Footer Links Section -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="index.html#services"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="View Our Plumbing Services">Plumbing
+                                    Services</a></li>
+                            <li><a href="index.html#about"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="Learn More About Plumbing 24 Service Inc">About
+                                    Us</a></li>
+                            <li><a href="index.html#projects"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="See Our Recent Plumbing Projects">Projects</a></li>
+                            <li><a href="index.html#contact"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="Get in Touch with Plumbing 24 Service Inc">Contact</a></li>
+                            <li><a href="blogs.html"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="Read Our Plumbing Tips and News">Blog</a></li>
+                            <li><a href="index.html#faq"
+                                    class="text-gray-400 hover:text-white transition"
+                                    title="Frequently Asked Questions">FAQ</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Services -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Services</h3>
+                        <ul class="space-y-3">
+                            <li><a href="services/emergency-plumbing.html"
+                                    title="Emergency Plumbing Services"
+                                    class="text-gray-400 hover:text-white transition">Emergency
+                                    Plumbing</a></li>
+                            <li><a href="services/drain-cleaning.html"
+                                    title="Drain Cleaning Services"
+                                    class="text-gray-400 hover:text-white transition">Drain
+                                    Cleaning</a></li>
+                            <li><a href="services/water-heater-services.html"
+                                    title="Water Heater Repair and Installation"
+                                    class="text-gray-400 hover:text-white transition">Water
+                                    Heater
+                                    Services</a></li>
+                            <li><a href="services/toilet-repair.html"
+                                    title="Toilet Repair and Installation"
+                                    class="text-gray-400 hover:text-white transition">Toilet
+                                    Repair</a></li>
+                            <li><a href="services/pipe-repair.html"
+                                    title="Pipe Repair and Replacement"
+                                    class="text-gray-400 hover:text-white transition">Pipe
+                                    Repair</a></li>
+                            <li><a href="services/commercial-plumbing.html"
+                                    title="Commercial Plumbing Services"
+                                    class="text-gray-400 hover:text-white transition">Commercial
+                                    Plumbing</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact -->
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Contact</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-phone-alt mt-1 mr-3 text-blue-600"></i>
+                                <a href="tel:2392921993" class="hover:underline"
+                                    title="Call Plumbing 24 Service Inc">
+                                    (239) 292-1993</a>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
+                                <span>1165 Palm Avenue, Fort Myers, FL
+                                    33903</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-envelope mt-1 mr-3 text-blue-600"></i>
+                                <a href="mailto:service@plumbing24service.com"
+                                    title="Email Plumbing 24 Service Inc"
+                                    class="hover:underline">service@plumbing24service.com</a>
+                            </li>
+                            <li class="flex items-start">
+                                <i
+                                    class="fas fa-clock mt-1 mr-3 text-blue-600"></i>
+                                <div>
+                                    <p>24/7 Emergency Service</p>
+                                    <p class="text-blue-200 text-sm">Regular
+                                        Hours: Mon-Sun 8 am-8
+                                        pm</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                    <p>© 2025 Plumbing 24 Service Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Sticky Buttons -->
+        <button id="back-to-top" title="Scroll Back to Top of Page"
+            class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center">
+            <i class="fas fa-arrow-up text-3xl md:text-xl"></i>
+        </button>
+
+        <a href="tel:2392921993" id="mobile-call-button"
+            title="Call Our Emergency Plumbing Service Now"
+            class="fixed bottom-10 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-lg z-50 hidden md:hidden flex items-center justify-center">
+            <i class="fas fa-phone-alt text-3xl"></i>
+        </a>
+
+        <!-- Scripts -->
+        <script src="../scripts/script.js"></script>
+    </body>
+</html>
