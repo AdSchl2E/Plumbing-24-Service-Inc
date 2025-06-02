@@ -2,51 +2,72 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://plumbing24service.com/index.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <loc>https://plumbing24service.com/</loc>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   
-  <!-- Service Pages -->
+  <!-- Main Pages -->  
+  <url>
+    <loc>https://plumbing24service.com/blogs.html</loc>
+    <lastmod>2025-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://plumbing24service.com/blogs/backflow-prevention-importance.html</loc>
+    <lastmod>2025-07-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://plumbing24service.com/blogs/water-heater-warning-signs.html</loc>
+    <lastmod>2025-06-01</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
   <url>
     <loc>https://plumbing24service.com/services/emergency-plumbing.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://plumbing24service.com/services/drain-cleaning.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://plumbing24service.com/services/water-heater-services.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://plumbing24service.com/services/toilet-repair.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://plumbing24service.com/services/pipe-repair.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <url>
     <loc>https://plumbing24service.com/services/commercial-plumbing.html</loc>
-    <lastmod>2025-05-31</lastmod>
+    <lastmod>2025-06-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

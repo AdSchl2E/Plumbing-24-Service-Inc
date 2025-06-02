@@ -440,3 +440,66 @@ try {
 } catch (err) {
   console.error('Error updating index.html:', err);
 }
+
+// Generate sitemap
+console.log('Generating sitemap.xml...');
+const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+
+let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://plumbing24service.com/</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Main Pages -->  
+  <url>
+    <loc>https://plumbing24service.com/blogs.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+
+// Add all blog posts to sitemap
+posts.forEach(post => {
+  const postDate = new Date(post.date).toISOString().split('T')[0];
+  sitemapContent += `  
+  <url>
+    <loc>https://plumbing24service.com/blogs/${post.slug}.html</loc>
+    <lastmod>${postDate}</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+`;
+});
+
+// Add service pages (static)
+const servicePages = [
+  'emergency-plumbing', 
+  'drain-cleaning',
+  'water-heater-services', 
+  'toilet-repair',
+  'pipe-repair',
+  'commercial-plumbing'
+];
+
+servicePages.forEach(service => {
+  sitemapContent += `  
+  <url>
+    <loc>https://plumbing24service.com/services/${service}.html</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+`;
+});
+
+sitemapContent += `</urlset>`;
+
+// Write sitemap to file
+fs.writeFileSync(path.join(__dirname, '../sitemap.xml'), sitemapContent);
+console.log('Sitemap generated successfully!');
