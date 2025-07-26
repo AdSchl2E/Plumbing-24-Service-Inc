@@ -170,7 +170,7 @@ posts.forEach(post => {
 
   // If no professional tip, create a generic one
   if (!tipContent) {
-    tipContent = `<p>Consider flushing your water heater annually to remove sediment buildup. This simple maintenance step can significantly extend the life of your unit and improve energy efficiency. For homes with hard water in Fort Myers, we recommend installing a water softener to reduce mineral deposits and protect all your plumbing fixtures, not just your water heater.</p>`;
+    tipContent = `<p>Consider flushing your water heater annually to remove sediment buildup. This simple maintenance step can significantly extend the life of your unit and improve energy efficiency. For homes with hard water in Miami, we recommend installing a water softener to reduce mineral deposits and protect all your plumbing fixtures, not just your water heater.</p>`;
   }
 
   // Get related articles
