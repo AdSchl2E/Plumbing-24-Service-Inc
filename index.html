@@ -141,45 +141,69 @@
           <div class="bg-white bg-opacity-90 rounded-lg p-6 max-w-md mx-auto">
             <h3 class="text-2xl font-bold text-blue-800 mb-4">Request a Free
               Estimate</h3>
-            <form class="space-y-4">
+            <form class="space-y-4"
+              action="https://formsubmit.co/plumbing24serviceinc@gmail.com"
+              method="POST">
               <div>
-                <input type="text" placeholder="Your Name"
+                <label for="name"
+                  class="block text-gray-700 font-medium mb-1">Your Name</label>
+                <input type="text" id="name" name="name" required
+                  placeholder="John Doe"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
               </div>
               <div>
-                <input type="email" placeholder="Email Address"
+                <label for="email"
+                  class="block text-gray-700 font-medium mb-1">Email
+                  Address</label>
+                <input type="email" id="email" name="email" required
+                  placeholder="you@example.com"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
               </div>
               <div>
-                <input type="tel" placeholder="Phone Number"
+                <label for="phone"
+                  class="block text-gray-700 font-medium mb-1">Phone
+                  Number</label>
+                <input type="tel" id="phone" name="phone"
+                  placeholder="(239) 555-0123"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
               </div>
               <div>
-                <label for="hero-service"
+                <label for="service"
                   class="block text-gray-700 font-medium mb-1">Service
                   Needed</label>
-                <select id="hero-service"
+                <select id="service" name="service"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
                   <option>Select Service</option>
                   <option>Emergency Plumbing</option>
                   <option>Drain Cleaning</option>
-                  <option>Water Heater Repair</option>
-                  <option>Pipe Repair</option>
+                  <option>Water Heater Repair/Installation</option>
+                  <option>Toilet Repair/Installation</option>
+                  <option>Pipe Repair/Replacement</option>
                   <option>Other</option>
                 </select>
               </div>
               <div>
-                <label for="hero-message"
-                  class="block text-gray-700 font-medium mb-1">Description</label>
-                <textarea id="hero-message"
-                  placeholder="Describe your plumbing issue"
+                <label for="message"
+                  class="block text-gray-700 font-medium mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" required
+                  placeholder="How can we help you?"
                   class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"></textarea>
               </div>
+              <!-- Anti-spam honeypot -->
+              <input type="text" name="_honey" style="display:none">
+              <!-- Disable CAPTCHA -->
+              <input type="hidden" name="_captcha" value="false">
+              <!-- Change the template to 'table' -->
+              <input type="hidden" name="_template" value="table">
               <button type="submit"
                 class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
-                Get Free Estimate
+                Send Message
               </button>
             </form>
+            <div id="toast-success"
+              class="fixed top-28 right-8 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+              <i class="fas fa-check-circle mr-2"></i>Message sent successfully!
+            </div>
           </div>
         </div>
       </div>
@@ -725,36 +749,38 @@
             <div class="bg-white rounded-lg p-8 h-full">
               <h3 class="text-2xl font-bold text-blue-800 mb-6">Request a Free
                 Estimate</h3>
-              <form class="space-y-4">
+              <form class="space-y-4" id="contact-form-bottom"
+                action="https://formsubmit.co/plumbing24serviceinc@gmail.com"
+                method="POST">
                 <div>
-                  <label for="name"
+                  <label for="name-bottom"
                     class="block text-gray-700 font-medium mb-1">Your
                     Name</label>
-                  <input type="text" id="name" placeholder="John Doe"
+                  <input type="text" id="name-bottom" name="name" required
+                    placeholder="John Doe"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
                 </div>
-
                 <div>
-                  <label for="email"
+                  <label for="email-bottom"
                     class="block text-gray-700 font-medium mb-1">Email
                     Address</label>
-                  <input type="email" id="email" placeholder="you@example.com"
+                  <input type="email" id="email-bottom" name="email" required
+                    placeholder="you@example.com"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
                 </div>
-
                 <div>
-                  <label for="phone"
+                  <label for="phone-bottom"
                     class="block text-gray-700 font-medium mb-1">Phone
                     Number</label>
-                  <input type="tel" id="phone" placeholder="(239) 555-0123"
+                  <input type="tel" id="phone-bottom" name="phone"
+                    placeholder="(239) 555-0123"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
                 </div>
-
                 <div>
-                  <label for="service"
+                  <label for="service-bottom"
                     class="block text-gray-700 font-medium mb-1">Service
                     Needed</label>
-                  <select id="service"
+                  <select id="service-bottom" name="service"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700">
                     <option>Select Service</option>
                     <option>Emergency Plumbing</option>
@@ -765,421 +791,433 @@
                     <option>Other</option>
                   </select>
                 </div>
-
                 <div>
-                  <label for="message"
+                  <label for="message-bottom"
                     class="block text-gray-700 font-medium mb-1">Message</label>
-                  <textarea id="message" rows="4"
+                  <textarea id="message-bottom" name="message" rows="4" required
                     placeholder="How can we help you?"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"></textarea>
                 </div>
-
+                <input type="text" name="_honey" style="display:none">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
                 <button type="submit"
                   class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                   Send Message
                 </button>
               </form>
+              <div id="toast-success-bottom"
+                class="fixed top-28 right-8 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg z-50 opacity-0 pointer-events-none transition-opacity duration-300">
+                <i class="fas fa-check-circle mr-2"></i>Message sent
+                successfully!
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-blue-800 mb-4">Plumbing Tips &
-            News</h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Helpful articles
-            about plumbing maintenance and common issues in Miami</p>
-          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
-        </div>
+        <!-- Blog Section -->
+        <section id="blog" class="py-16 bg-gray-50">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-blue-800 mb-4">Plumbing Tips &
+                News</h2>
+              <p class="text-lg text-gray-600 max-w-2xl mx-auto">Helpful
+                articles
+                about plumbing maintenance and common issues in Miami</p>
+              <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          <!-- Blog Post -->
-          <div
-            class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
-            data-category="Plumbing Safety">
-            <a href="blogs/backflow-prevention-importance.html" class="block"
-              aria-label="Read article: The Importance of Backflow Prevention in Miami Plumbing">
-              <div class="h-48 overflow-hidden">
-                <img src="img/blog/default-plumbing.webp"
-                  alt="The Importance of Backflow Prevention in Miami Plumbing"
-                  title="The Importance of Backflow Prevention in Miami Plumbing"
-                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-              </div>
-            </a>
-            <div class="p-6">
-              <div class="flex items-center text-sm text-gray-500 mb-3">
-                <span
-                  class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Plumbing
-                  Safety</span>
-                <span class="mx-2">•</span>
-                <span>July 1, 2025</span>
-              </div>
-              <a href="blogs/backflow-prevention-importance.html" class="block">
-                <h3
-                  class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">The
-                  Importance of Backflow Prevention in Miami Plumbing</h3>
-              </a>
-              <p class="text-gray-600 mb-4">Backflow prevention is crucial for
-                safeguarding your home’s water supply. Learn what backflow is,
-                why it’s a concern in Miami, and how a professional plumber can
-                help.</p>
-              <div class="flex items-center justify-between">
+              <!-- Blog Post -->
+              <div
+                class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+                data-category="Plumbing Safety">
                 <a href="blogs/backflow-prevention-importance.html"
-                  class="text-blue-600 font-medium hover:underline"
-                  aria-label="Learn more about the importance of backflow prevention in Miami plumbing">
-                  Learn about Plumbing Safety tips <i
-                    class="fas fa-arrow-right ml-1 text-sm"></i>
+                  class="block"
+                  aria-label="Read article: The Importance of Backflow Prevention in Miami Plumbing">
+                  <div class="h-48 overflow-hidden">
+                    <img src="img/blog/default-plumbing.webp"
+                      alt="The Importance of Backflow Prevention in Miami Plumbing"
+                      title="The Importance of Backflow Prevention in Miami Plumbing"
+                      class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                  </div>
                 </a>
-                <span class="text-sm text-gray-500">7 min read</span>
-              </div>
-            </div>
-          </div>
-          <!-- Blog Post -->
-          <div
-            class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
-            data-category="Maintenance">
-            <a href="blogs/water-heater-warning-signs.html" class="block"
-              aria-label="Read article: 5 Signs Your Water Heater Needs Immediate Attention">
-              <div class="h-48 overflow-hidden">
-                <img src="img/blog/water-heater-warning-signs.webp"
-                  alt="5 Signs Your Water Heater Needs Immediate Attention"
-                  title="5 Signs Your Water Heater Needs Immediate Attention"
-                  class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-              </div>
-            </a>
-            <div class="p-6">
-              <div class="flex items-center text-sm text-gray-500 mb-3">
-                <span
-                  class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Maintenance</span>
-                <span class="mx-2">•</span>
-                <span>June 1, 2025</span>
-              </div>
-              <a href="blogs/water-heater-warning-signs.html" class="block">
-                <h3
-                  class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">5
-                  Signs Your Water Heater Needs Immediate Attention</h3>
-              </a>
-              <p class="text-gray-600 mb-4">Learn the critical warning signs
-                that your water heater is failing and what steps you should take
-                to avoid costly emergencies and water damage in your Miami
-                home.</p>
-              <div class="flex items-center justify-between">
-                <a href="blogs/water-heater-warning-signs.html"
-                  class="text-blue-600 font-medium hover:underline"
-                  aria-label="Learn more about 5 signs your water heater needs immediate attention">
-                  Learn about Maintenance tips <i
-                    class="fas fa-arrow-right ml-1 text-sm"></i>
-                </a>
-                <span class="text-sm text-gray-500">8 min read</span>
-              </div>
-            </div>
-          </div></div>
-        <div class="text-center mt-10">
-          <a href="blogs.html"
-            class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-            title="View All Plumbing Articles">
-            View All Articles
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-16">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-          <h2 class="text-3xl font-bold text-blue-800 mb-4">Frequently Asked
-            Questions</h2>
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto">Answers to
-            common
-            plumbing questions from Miami homeowners</p>
-          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
-        </div>
-
-        <div class="max-w-3xl mx-auto">
-          <!-- FAQ Items -->
-          <div class="space-y-4">
-            <!-- FAQ Item 1 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
-                <span>What areas of Miami do you serve?</span>
-                <i class="fas fa-plus text-blue-600"></i>
-              </button>
-              <div class="accordion-content bg-white px-4">
-                <p class="text-gray-700 py-4">We provide plumbing services
-                  throughout all of Miami and the surrounding cities, including
-                  Miami Beach, Coral Gables, Hialeah, North Miami, Doral,
-                  Kendall, and Aventura. Our team is available 24/7 for
-                  emergency plumbing services anywhere in the Greater Miami
-                  area.
-                </p>
-              </div>
-            </div>
-
-            <!-- FAQ Item 2 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
-                <span>How quickly can you respond to a plumbing
-                  emergency?</span>
-                <i class="fas fa-plus text-blue-600"></i>
-              </button>
-              <div class="accordion-content bg-white px-4">
-                <p class="text-gray-700 py-4">For emergency plumbing
-                  situations
-                  like burst pipes, severe leaks, or sewage backups, we
-                  typically respond within 1-2 hours in the Miami area.
-                  We
-                  have multiple teams on call 24/7 to ensure fast response
-                  times
-                  when you need us most.</p>
-              </div>
-            </div>
-
-            <!-- FAQ Item 3 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
-                <span>Do you offer free estimates for plumbing work?</span>
-                <i class="fas fa-plus text-blue-600"></i>
-              </button>
-              <div class="accordion-content bg-white px-4">
-                <p class="text-gray-700 py-4">Yes, we provide free,
-                  no-obligation estimates for all plumbing services in Fort
-                  Myers. For emergency situations, we'll give you an
-                  estimate
-                  before beginning any work. For non-emergency projects, we
-                  can
-                  provide estimates over the phone or schedule an in-home
-                  consultation.</p>
-              </div>
-            </div>
-
-            <!-- FAQ Item 4 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
-                <span>What payment methods do you accept?</span>
-                <i class="fas fa-plus text-blue-600"></i>
-              </button>
-              <div class="accordion-content bg-white px-4">
-                <p class="text-gray-700 py-4">We accept all major credit
-                  cards
-                  (Visa, Mastercard, American Express, Discover), checks,
-                  and
-                  cash. We also offer financing options for larger plumbing
-                  projects in Miami through trusted third-party
-                  providers.</p>
-              </div>
-            </div>
-
-            <!-- FAQ Item 5 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
-                <span>Are your plumbers licensed and insured?</span>
-                <i class="fas fa-plus text-blue-600"></i>
-              </button>
-              <div class="accordion-content bg-white px-4">
-                <p class="text-gray-700 py-4">Absolutely. All our plumbing
-                  technicians are fully licensed by the state of Florida and
-                  carry comprehensive liability insurance and workers'
-                  compensation coverage. We're proud to meet all local Fort
-                  Myers licensing requirements to ensure your
-                  protection.</p>
-              </div>
-            </div>
-
-            <!-- FAQ Item 6 -->
-            <div class="border border-gray-200 rounded-lg overflow-hidden">
-              <button
-                class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
-                <span>What's included in your lifetime warranty?</span>
-                <i class="fas fa-plus text-blue-600"></i>
-              </button>
-              <div class="accordion-content bg-white px-4">
-                <p class="text-gray-700 py-4">Our lifetime warranty covers
-                  all
-                  parts and labor for repairs we perform on your Miami
-                  home's plumbing system. If any issue recurs due to our
-                  workmanship, we'll repair it at no cost to you. This
-                  doesn't
-                  cover new problems or damage caused by neglect, but
-                  demonstrates our commitment to quality.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white pt-16 pb-8">
-      <div class="container mx-auto px-4">
-        <!-- Logo Section -->
-        <div class="flex flex-col items-center justify-center mb-12">
-          <img src="img/logo.webp" title="Plumbing 24 Service Inc"
-            alt="Plumbing 24 Service Inc Logo" class="h-48 w-48 mb-6">
-          <h3 class="text-3xl font-bold text-center">Plumbing 24 Service
-            Inc</h3>
-          <p class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed
-            &
-            insured plumbing services #CFC057988
-            for Miami homes and businesses. <br>Fast response and
-            affordable
-            rates.</p>
-          <div class="flex space-x-4">
-            <a href="https://www.facebook.com/plumbing24serviceinc"
-              class="text-gray-400 hover:text-gray-200 transition"
-              title="Follow Plumbing 24 Service Inc on Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.instagram.com/plumbing24serviceinc"
-              class="text-gray-400 hover:text-gray-200 transition"
-              title="Follow Plumbing 24 Service Inc on Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://www.linkedin.com/company/plumbing24serviceinc"
-              class="text-gray-400 hover:text-gray-200 transition"
-              title="Connect with Plumbing 24 Service Inc on LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a
-              href="https://www.yelp.com/biz/plumbing-24-service-inc-fort-myers"
-              class="text-gray-400 hover:text-gray-200 transition"
-              title="View Plumbing 24 Service Inc on Yelp">
-              <i class="fab fa-yelp"></i>
-            </a>
-            <a
-              href="https://www.google.com/maps/place/Plumbing+24+Service+Inc/@26.640628,-81.8784536,12z"
-              class="text-gray-400 hover:text-gray-200 transition"
-              title="Find Plumbing 24 Service Inc on Google Maps">
-              <i class="fas fa-map-marker-alt"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Footer Links Section -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-          <!-- Quick Links -->
-          <div>
-            <h3 class="text-xl font-bold mb-6">Quick Links</h3>
-            <ul class="space-y-3">
-              <li><a href="#services"
-                  class="text-gray-400 hover:text-white transition"
-                  title="View Our Plumbing Services">Plumbing
-                  Services</a></li>
-              <li><a href="#about"
-                  class="text-gray-400 hover:text-white transition"
-                  title="Learn More About Plumbing 24 Service Inc">About
-                  Us</a></li>
-              <li><a href="#projects"
-                  class="text-gray-400 hover:text-white transition"
-                  title="See Our Recent Plumbing Projects">Projects</a></li>
-              <li><a href="#contact"
-                  class="text-gray-400 hover:text-white transition"
-                  title="Get in Touch with Plumbing 24 Service Inc">Contact</a></li>
-              <li><a href="blogs.html"
-                  class="text-gray-400 hover:text-white transition"
-                  title="Read Our Plumbing Tips and News">Blog</a></li>
-              <li><a href="#faq"
-                  class="text-gray-400 hover:text-white transition"
-                  title="Frequently Asked Questions">FAQ</a></li>
-            </ul>
-          </div>
-
-          <!-- Services -->
-          <div>
-            <h3 class="text-xl font-bold mb-6">Services</h3>
-            <ul class="space-y-3">
-              <li><a href="services/emergency-plumbing.html"
-                  title="Emergency Plumbing Services"
-                  class="text-gray-400 hover:text-white transition">Emergency
-                  Plumbing</a></li>
-              <li><a href="services/drain-cleaning.html"
-                  title="Drain Cleaning Services"
-                  class="text-gray-400 hover:text-white transition">Drain
-                  Cleaning</a></li>
-              <li><a href="services/water-heater-services.html"
-                  title="Water Heater Repair and Installation"
-                  class="text-gray-400 hover:text-white transition">Water
-                  Heater
-                  Services</a></li>
-              <li><a href="services/toilet-repair.html"
-                  title="Toilet Repair and Installation"
-                  class="text-gray-400 hover:text-white transition">Toilet
-                  Repair</a></li>
-              <li><a href="services/pipe-repair.html"
-                  title="Pipe Repair and Replacement"
-                  class="text-gray-400 hover:text-white transition">Pipe
-                  Repair</a></li>
-              <li><a href="services/commercial-plumbing.html"
-                  title="Commercial Plumbing Services"
-                  class="text-gray-400 hover:text-white transition">Commercial
-                  Plumbing</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact -->
-          <div>
-            <h3 class="text-xl font-bold mb-6">Contact</h3>
-            <ul class="space-y-4">
-              <li class="flex items-start">
-                <i class="fas fa-phone-alt mt-1 mr-3 text-blue-600"></i>
-                <a href="tel:2392921993" class="hover:underline"
-                  title="Call Plumbing 24 Service Inc">
-                  (239) 292-1993</a>
-              </li>
-              <li class="flex items-start">
-                <i
-                  class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
-                <span>1165 Palm Avenue, Miami, FL 33903</span>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-envelope mt-1 mr-3 text-blue-600"></i>
-                <a href="mailto:service@plumbing24service.com"
-                  title="Email Plumbing 24 Service Inc"
-                  class="hover:underline">service@plumbing24service.com</a>
-              </li>
-              <li class="flex items-start">
-                <i class="fas fa-clock mt-1 mr-3 text-blue-600"></i>
-                <div>
-                  <p>24/7 Emergency Service</p>
-                  <p class="text-blue-200 text-sm">Regular Hours: Mon-Sun 8
-                    am-8
-                    pm</p>
+                <div class="p-6">
+                  <div class="flex items-center text-sm text-gray-500 mb-3">
+                    <span
+                      class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Plumbing
+                      Safety</span>
+                    <span class="mx-2">•</span>
+                    <span>July 1, 2025</span>
+                  </div>
+                  <a href="blogs/backflow-prevention-importance.html"
+                    class="block">
+                    <h3
+                      class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">The
+                      Importance of Backflow Prevention in Miami Plumbing</h3>
+                  </a>
+                  <p class="text-gray-600 mb-4">Backflow prevention is crucial
+                    for
+                    safeguarding your home’s water supply. Learn what backflow
+                    is,
+                    why it’s a concern in Miami, and how a professional plumber
+                    can
+                    help.</p>
+                  <div class="flex items-center justify-between">
+                    <a href="blogs/backflow-prevention-importance.html"
+                      class="text-blue-600 font-medium hover:underline"
+                      aria-label="Learn more about the importance of backflow prevention in Miami plumbing">
+                      Learn about Plumbing Safety tips <i
+                        class="fas fa-arrow-right ml-1 text-sm"></i>
+                    </a>
+                    <span class="text-sm text-gray-500">7 min read</span>
+                  </div>
                 </div>
-              </li>
-            </ul>
+              </div>
+              <!-- Blog Post -->
+              <div
+                class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+                data-category="Maintenance">
+                <a href="blogs/water-heater-warning-signs.html" class="block"
+                  aria-label="Read article: 5 Signs Your Water Heater Needs Immediate Attention">
+                  <div class="h-48 overflow-hidden">
+                    <img src="img/blog/water-heater-warning-signs.webp"
+                      alt="5 Signs Your Water Heater Needs Immediate Attention"
+                      title="5 Signs Your Water Heater Needs Immediate Attention"
+                      class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                  </div>
+                </a>
+                <div class="p-6">
+                  <div class="flex items-center text-sm text-gray-500 mb-3">
+                    <span
+                      class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Maintenance</span>
+                    <span class="mx-2">•</span>
+                    <span>June 1, 2025</span>
+                  </div>
+                  <a href="blogs/water-heater-warning-signs.html" class="block">
+                    <h3
+                      class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">5
+                      Signs Your Water Heater Needs Immediate Attention</h3>
+                  </a>
+                  <p class="text-gray-600 mb-4">Learn the critical warning signs
+                    that your water heater is failing and what steps you should
+                    take
+                    to avoid costly emergencies and water damage in your Miami
+                    home.</p>
+                  <div class="flex items-center justify-between">
+                    <a href="blogs/water-heater-warning-signs.html"
+                      class="text-blue-600 font-medium hover:underline"
+                      aria-label="Learn more about 5 signs your water heater needs immediate attention">
+                      Learn about Maintenance tips <i
+                        class="fas fa-arrow-right ml-1 text-sm"></i>
+                    </a>
+                    <span class="text-sm text-gray-500">8 min read</span>
+                  </div>
+                </div>
+              </div></div>
+            <div class="text-center mt-10">
+              <a href="blogs.html"
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300"
+                title="View All Plumbing Articles">
+                View All Articles
+              </a>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div
-          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-          <p>© 2025 Plumbing 24 Service Inc. All rights reserved.</p>
-        </div>
-      </footer>
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16">
+          <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+              <h2 class="text-3xl font-bold text-blue-800 mb-4">Frequently Asked
+                Questions</h2>
+              <p class="text-lg text-gray-600 max-w-2xl mx-auto">Answers to
+                common
+                plumbing questions from Miami homeowners</p>
+              <div class="w-24 h-1 bg-blue-600 mx-auto mt-4"></div>
+            </div>
 
-      <!-- Sticky Buttons -->
-      <button id="back-to-top" title="Scroll Back to Top of Page"
-        class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center">
-        <i class="fas fa-arrow-up text-3xl md:text-xl"></i>
-      </button>
+            <div class="max-w-3xl mx-auto">
+              <!-- FAQ Items -->
+              <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
+                    <span>What areas of Miami do you serve?</span>
+                    <i class="fas fa-plus text-blue-600"></i>
+                  </button>
+                  <div class="accordion-content bg-white px-4">
+                    <p class="text-gray-700 py-4">We provide plumbing services
+                      throughout all of Miami and the surrounding cities,
+                      including
+                      Miami Beach, Coral Gables, Hialeah, North Miami, Doral,
+                      Kendall, and Aventura. Our team is available 24/7 for
+                      emergency plumbing services anywhere in the Greater Miami
+                      area.
+                    </p>
+                  </div>
+                </div>
 
-      <a href="tel:2392921993" id="mobile-call-button"
-        title="Call Our Emergency Plumbing Service Now"
-        class="fixed bottom-10 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-lg z-50 hidden md:hidden flex items-center justify-center">
-        <i class="fas fa-phone-alt text-3xl"></i>
-      </a>
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
+                    <span>How quickly can you respond to a plumbing
+                      emergency?</span>
+                    <i class="fas fa-plus text-blue-600"></i>
+                  </button>
+                  <div class="accordion-content bg-white px-4">
+                    <p class="text-gray-700 py-4">For emergency plumbing
+                      situations
+                      like burst pipes, severe leaks, or sewage backups, we
+                      typically respond within 1-2 hours in the Miami area.
+                      We
+                      have multiple teams on call 24/7 to ensure fast response
+                      times
+                      when you need us most.</p>
+                  </div>
+                </div>
 
-      <script src="scripts/script.js"></script>
-      <script>
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
+                    <span>Do you offer free estimates for plumbing work?</span>
+                    <i class="fas fa-plus text-blue-600"></i>
+                  </button>
+                  <div class="accordion-content bg-white px-4">
+                    <p class="text-gray-700 py-4">Yes, we provide free,
+                      no-obligation estimates for all plumbing services in Fort
+                      Myers. For emergency situations, we'll give you an
+                      estimate
+                      before beginning any work. For non-emergency projects, we
+                      can
+                      provide estimates over the phone or schedule an in-home
+                      consultation.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
+                    <span>What payment methods do you accept?</span>
+                    <i class="fas fa-plus text-blue-600"></i>
+                  </button>
+                  <div class="accordion-content bg-white px-4">
+                    <p class="text-gray-700 py-4">We accept all major credit
+                      cards
+                      (Visa, Mastercard, American Express, Discover), checks,
+                      and
+                      cash. We also offer financing options for larger plumbing
+                      projects in Miami through trusted third-party
+                      providers.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
+                    <span>Are your plumbers licensed and insured?</span>
+                    <i class="fas fa-plus text-blue-600"></i>
+                  </button>
+                  <div class="accordion-content bg-white px-4">
+                    <p class="text-gray-700 py-4">Absolutely. All our plumbing
+                      technicians are fully licensed by the state of Florida and
+                      carry comprehensive liability insurance and workers'
+                      compensation coverage. We're proud to meet all local Fort
+                      Myers licensing requirements to ensure your
+                      protection.</p>
+                  </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                  <button
+                    class="accordion-btn flex justify-between items-center w-full text-left font-bold text-lg text-blue-800 p-4 hover:bg-gray-50 focus:outline-none">
+                    <span>What's included in your lifetime warranty?</span>
+                    <i class="fas fa-plus text-blue-600"></i>
+                  </button>
+                  <div class="accordion-content bg-white px-4">
+                    <p class="text-gray-700 py-4">Our lifetime warranty covers
+                      all
+                      parts and labor for repairs we perform on your Miami
+                      home's plumbing system. If any issue recurs due to our
+                      workmanship, we'll repair it at no cost to you. This
+                      doesn't
+                      cover new problems or damage caused by neglect, but
+                      demonstrates our commitment to quality.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 text-white pt-16 pb-8">
+          <div class="container mx-auto px-4">
+            <!-- Logo Section -->
+            <div class="flex flex-col items-center justify-center mb-12">
+              <img src="img/logo.webp" title="Plumbing 24 Service Inc"
+                alt="Plumbing 24 Service Inc Logo" class="h-48 w-48 mb-6">
+              <h3 class="text-3xl font-bold text-center">Plumbing 24 Service
+                Inc</h3>
+              <p class="mt-4 mb-6 text-gray-400 max-w-2xl text-center">Licensed
+                &
+                insured plumbing services #CFC057988
+                for Miami homes and businesses. <br>Fast response and
+                affordable
+                rates.</p>
+              <div class="flex space-x-4">
+                <a href="https://www.facebook.com/plumbing24serviceinc"
+                  class="text-gray-400 hover:text-gray-200 transition"
+                  title="Follow Plumbing 24 Service Inc on Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/plumbing24serviceinc"
+                  class="text-gray-400 hover:text-gray-200 transition"
+                  title="Follow Plumbing 24 Service Inc on Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/plumbing24serviceinc"
+                  class="text-gray-400 hover:text-gray-200 transition"
+                  title="Connect with Plumbing 24 Service Inc on LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a
+                  href="https://www.yelp.com/biz/plumbing-24-service-inc-fort-myers"
+                  class="text-gray-400 hover:text-gray-200 transition"
+                  title="View Plumbing 24 Service Inc on Yelp">
+                  <i class="fab fa-yelp"></i>
+                </a>
+                <a
+                  href="https://www.google.com/maps/place/Plumbing+24+Service+Inc/@26.640628,-81.8784536,12z"
+                  class="text-gray-400 hover:text-gray-200 transition"
+                  title="Find Plumbing 24 Service Inc on Google Maps">
+                  <i class="fas fa-map-marker-alt"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Footer Links Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+              <!-- Quick Links -->
+              <div>
+                <h3 class="text-xl font-bold mb-6">Quick Links</h3>
+                <ul class="space-y-3">
+                  <li><a href="#services"
+                      class="text-gray-400 hover:text-white transition"
+                      title="View Our Plumbing Services">Plumbing
+                      Services</a></li>
+                  <li><a href="#about"
+                      class="text-gray-400 hover:text-white transition"
+                      title="Learn More About Plumbing 24 Service Inc">About
+                      Us</a></li>
+                  <li><a href="#projects"
+                      class="text-gray-400 hover:text-white transition"
+                      title="See Our Recent Plumbing Projects">Projects</a></li>
+                  <li><a href="#contact"
+                      class="text-gray-400 hover:text-white transition"
+                      title="Get in Touch with Plumbing 24 Service Inc">Contact</a></li>
+                  <li><a href="blogs.html"
+                      class="text-gray-400 hover:text-white transition"
+                      title="Read Our Plumbing Tips and News">Blog</a></li>
+                  <li><a href="#faq"
+                      class="text-gray-400 hover:text-white transition"
+                      title="Frequently Asked Questions">FAQ</a></li>
+                </ul>
+              </div>
+
+              <!-- Services -->
+              <div>
+                <h3 class="text-xl font-bold mb-6">Services</h3>
+                <ul class="space-y-3">
+                  <li><a href="services/emergency-plumbing.html"
+                      title="Emergency Plumbing Services"
+                      class="text-gray-400 hover:text-white transition">Emergency
+                      Plumbing</a></li>
+                  <li><a href="services/drain-cleaning.html"
+                      title="Drain Cleaning Services"
+                      class="text-gray-400 hover:text-white transition">Drain
+                      Cleaning</a></li>
+                  <li><a href="services/water-heater-services.html"
+                      title="Water Heater Repair and Installation"
+                      class="text-gray-400 hover:text-white transition">Water
+                      Heater
+                      Services</a></li>
+                  <li><a href="services/toilet-repair.html"
+                      title="Toilet Repair and Installation"
+                      class="text-gray-400 hover:text-white transition">Toilet
+                      Repair</a></li>
+                  <li><a href="services/pipe-repair.html"
+                      title="Pipe Repair and Replacement"
+                      class="text-gray-400 hover:text-white transition">Pipe
+                      Repair</a></li>
+                  <li><a href="services/commercial-plumbing.html"
+                      title="Commercial Plumbing Services"
+                      class="text-gray-400 hover:text-white transition">Commercial
+                      Plumbing</a></li>
+                </ul>
+              </div>
+
+              <!-- Contact -->
+              <div>
+                <h3 class="text-xl font-bold mb-6">Contact</h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start">
+                    <i class="fas fa-phone-alt mt-1 mr-3 text-blue-600"></i>
+                    <a href="tel:2392921993" class="hover:underline"
+                      title="Call Plumbing 24 Service Inc">
+                      (239) 292-1993</a>
+                  </li>
+                  <li class="flex items-start">
+                    <i
+                      class="fas fa-map-marker-alt mt-1 mr-3 text-blue-600"></i>
+                    <span>1165 Palm Avenue, Miami, FL 33903</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-envelope mt-1 mr-3 text-blue-600"></i>
+                    <a href="mailto:service@plumbing24service.com"
+                      title="Email Plumbing 24 Service Inc"
+                      class="hover:underline">service@plumbing24service.com</a>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-clock mt-1 mr-3 text-blue-600"></i>
+                    <div>
+                      <p>24/7 Emergency Service</p>
+                      <p class="text-blue-200 text-sm">Regular Hours: Mon-Sun 8
+                        am-8
+                        pm</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div
+              class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+              <p>© 2025 Plumbing 24 Service Inc. All rights reserved.</p>
+            </div>
+          </footer>
+
+          <!-- Sticky Buttons -->
+          <button id="back-to-top" title="Scroll Back to Top of Page"
+            class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center">
+            <i class="fas fa-arrow-up text-3xl md:text-xl"></i>
+          </button>
+
+          <a href="tel:2392921993" id="mobile-call-button"
+            title="Call Our Emergency Plumbing Service Now"
+            class="fixed bottom-10 right-6 bg-green-600 hover:bg-green-700 text-white w-16 h-16 rounded-full shadow-lg z-50 hidden md:hidden flex items-center justify-center">
+            <i class="fas fa-phone-alt text-3xl"></i>
+          </a>
+
+          <script src="scripts/script.js"></script>
+          <script>
         // Progressive image loading for hero section - modified for desktop only
         document.addEventListener('DOMContentLoaded', function () {
             const hero = document.querySelector('.hero');
@@ -1213,6 +1251,70 @@
                 };
             }
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('contact-form');
+        const toast = document.getElementById('toast-success');
+        if (form) {
+          form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+              if (response.ok) {
+                toast.style.opacity = '1';
+                toast.style.pointerEvents = 'auto';
+                form.reset();
+                setTimeout(() => {
+                  toast.style.opacity = '0';
+                  toast.style.pointerEvents = 'none';
+                }, 3500);
+              } else {
+                alert('There was an error sending your message. Please try again.');
+              }
+            })
+            .catch(() => {
+              alert('There was an error sending your message. Please try again.');
+            });
+          });
+        }
+      });
+
+      document.addEventListener('DOMContentLoaded', function () {
+      const formBottom = document.getElementById('contact-form-bottom');
+      const toastBottom = document.getElementById('toast-success-bottom');
+      if (formBottom) {
+        formBottom.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const formData = new FormData(formBottom);
+          fetch(formBottom.action, {
+            method: 'POST',
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+          })
+          .then(response => {
+            if (response.ok) {
+              toastBottom.style.opacity = '1';
+              toastBottom.style.pointerEvents = 'auto';
+              formBottom.reset();
+              setTimeout(() => {
+                toastBottom.style.opacity = '0';
+                toastBottom.style.pointerEvents = 'none';
+              }, 3500);
+            } else {
+              alert('There was an error sending your message. Please try again.');
+            }
+          })
+          .catch(() => {
+            alert('There was an error sending your message. Please try again.');
+          });
+        });
+      }
+    });
       </script>
-    </body>
-  </html>
+        </body>
+      </html>
