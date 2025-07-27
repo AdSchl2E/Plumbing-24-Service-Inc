@@ -24,8 +24,10 @@ jobs:
         run: node scripts/generate-blog.js
         
       - name: Commit and push if changed
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --local user.email "ad.schlee@gmail.com"
           git config --local user.name "AdSchl2E"
           git add -A
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate blog pages" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-generate blog pages" && git push https://x-access-token:${GH_PAT}@github.com/AdSchl2E/Plumbing-24-Service-Inc.git HEAD:main)
