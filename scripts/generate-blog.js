@@ -449,7 +449,7 @@ let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://plumbing24service.com/</loc>
+    <loc>https://plumbing24serviceinc.com/</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
@@ -457,7 +457,7 @@ let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
   
   <!-- Main Pages -->  
   <url>
-    <loc>https://plumbing24service.com/blogs.html</loc>
+    <loc>https://plumbing24serviceinc.com/blogs.html</loc>
     <lastmod>${today}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -469,7 +469,7 @@ posts.forEach(post => {
   const postDate = new Date(post.date).toISOString().split('T')[0];
   sitemapContent += `  
   <url>
-    <loc>https://plumbing24service.com/blogs/${post.slug}.html</loc>
+    <loc>https://plumbing24serviceinc.com/blogs/${post.slug}.html</loc>
     <lastmod>${postDate}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
@@ -490,7 +490,7 @@ const servicePages = [
 servicePages.forEach(service => {
   sitemapContent += `  
   <url>
-    <loc>https://plumbing24service.com/services/${service}.html</loc>
+    <loc>https://plumbing24serviceinc.com/services/${service}.html</loc>
     <lastmod>${today}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
