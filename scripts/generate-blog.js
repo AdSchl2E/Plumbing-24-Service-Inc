@@ -292,7 +292,7 @@ const categories = [...new Set(posts.map(post => post.category))].sort();
 let categoryButtonsHtml = '';
 categories.forEach(category => {
   categoryButtonsHtml += `
-    <button class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition" data-category="${category}">
+    <button class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-blue-700 hover:text-white transition cursor-pointer" data-category="${category}">
         ${category}
     </button>
   `;

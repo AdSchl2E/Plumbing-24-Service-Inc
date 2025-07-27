@@ -6,7 +6,9 @@
     "generate": "node scripts/generate-blog.js"
   },
   "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
     "gray-matter": "^4.0.3",
-    "marked": "^4.3.0"
+    "marked": "^4.3.0",
+    "tailwindcss": "^4.1.11"
   }
 }

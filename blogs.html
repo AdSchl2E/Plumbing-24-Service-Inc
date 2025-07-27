@@ -13,7 +13,6 @@
         <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
 
-        <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -59,7 +58,7 @@
                             title="24/7 Plumbing Service in Miami"
                             class="h-16 w-16 mr-4">
                     </a>
-                    <h1 class="text-2xl font-bold text-blue-800">Plumbing 24
+                    <h1 class="text-xl font-bold text-blue-800">Plumbing 24
                         Service
                         Inc</h1>
                 </div>
@@ -135,82 +134,123 @@
                             by Category</h2>
                         <div class="flex flex-wrap gap-2" id="category-filters">
                             <button
-                                class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+                                class="category-filter bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 hover:text-white transition cursor-pointer"
                                 data-category="all">
                                 All Categories
                             </button>
-                            
-    <button class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition" data-category="Maintenance">
-        Maintenance
-    </button>
-  
-    <button class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 transition" data-category="Plumbing Safety">
-        Plumbing Safety
-    </button>
-  
+
+                            <button
+                                class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-blue-700 hover:text-white transition cursor-pointer"
+                                data-category="Maintenance">
+                                Maintenance
+                            </button>
+
+                            <button
+                                class="category-filter bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-blue-700 hover:text-white transition cursor-pointer"
+                                data-category="Plumbing Safety">
+                                Plumbing Safety
+                            </button>
+
                         </div>
                     </div>
                 </div>
 
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    
-  <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Plumbing Safety">
-    <a href="blogs/backflow-prevention-importance.html" class="block" aria-label="Read article: The Importance of Backflow Prevention in Miami Plumbing">
-      <div class="h-48 overflow-hidden">
-        <img src="img/blog/default-plumbing.webp" 
-          alt="The Importance of Backflow Prevention in Miami Plumbing" 
-          title="The Importance of Backflow Prevention in Miami Plumbing" 
-          class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-      </div>
-    </a>
-    <div class="p-6">
-      <div class="flex items-center text-sm text-gray-500 mb-3">
-        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Plumbing Safety</span>
-        <span class="mx-2">•</span>
-        <span>July 1, 2025</span>
-      </div>
-      <a href="blogs/backflow-prevention-importance.html" class="block">
-        <h3 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">The Importance of Backflow Prevention in Miami Plumbing</h3>
-      </a>
-      <p class="text-gray-600 mb-4">Backflow prevention is crucial for safeguarding your home’s water supply. Learn what backflow is, why it’s a concern in Miami, and how a professional plumber can help.</p>
-      <div class="flex items-center justify-between">
-        <a href="blogs/backflow-prevention-importance.html" class="text-blue-600 font-medium hover:underline" 
-           aria-label="Read full article about the importance of backflow prevention in Miami plumbing">
-          Read about the importance of ba... <i class="fas fa-arrow-right ml-1 text-sm"></i>
-        </a>
-        <span class="text-sm text-gray-500">7 min read</span>
-      </div>
-    </div>
-  </div>
-  <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg" data-category="Maintenance">
-    <a href="blogs/water-heater-warning-signs.html" class="block" aria-label="Read article: 5 Signs Your Water Heater Needs Immediate Attention">
-      <div class="h-48 overflow-hidden">
-        <img src="img/blog/water-heater-warning-signs.webp" 
-          alt="5 Signs Your Water Heater Needs Immediate Attention" 
-          title="5 Signs Your Water Heater Needs Immediate Attention" 
-          class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
-      </div>
-    </a>
-    <div class="p-6">
-      <div class="flex items-center text-sm text-gray-500 mb-3">
-        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Maintenance</span>
-        <span class="mx-2">•</span>
-        <span>June 1, 2025</span>
-      </div>
-      <a href="blogs/water-heater-warning-signs.html" class="block">
-        <h3 class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">5 Signs Your Water Heater Needs Immediate Attention</h3>
-      </a>
-      <p class="text-gray-600 mb-4">Learn the critical warning signs that your water heater is failing and what steps you should take to avoid costly emergencies and water damage in your Miami home.</p>
-      <div class="flex items-center justify-between">
-        <a href="blogs/water-heater-warning-signs.html" class="text-blue-600 font-medium hover:underline" 
-           aria-label="Read full article about 5 signs your water heater needs immediate attention">
-          Read about 5 signs your water h... <i class="fas fa-arrow-right ml-1 text-sm"></i>
-        </a>
-        <span class="text-sm text-gray-500">8 min read</span>
-      </div>
-    </div>
-  </div>
+
+                    <div
+                        class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+                        data-category="Plumbing Safety">
+                        <a href="blogs/backflow-prevention-importance.html"
+                            class="block"
+                            aria-label="Read article: The Importance of Backflow Prevention in Miami Plumbing">
+                            <div class="h-48 overflow-hidden">
+                                <img src="img/blog/default-plumbing.webp"
+                                    alt="The Importance of Backflow Prevention in Miami Plumbing"
+                                    title="The Importance of Backflow Prevention in Miami Plumbing"
+                                    class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div
+                                class="flex items-center text-sm text-gray-500 mb-3">
+                                <span
+                                    class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Plumbing
+                                    Safety</span>
+                                <span class="mx-2">•</span>
+                                <span>July 1, 2025</span>
+                            </div>
+                            <a href="blogs/backflow-prevention-importance.html"
+                                class="block">
+                                <h3
+                                    class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">The
+                                    Importance of Backflow Prevention in Miami
+                                    Plumbing</h3>
+                            </a>
+                            <p class="text-gray-600 mb-4">Backflow prevention is
+                                crucial for safeguarding your home’s water
+                                supply. Learn what backflow is, why it’s a
+                                concern in Miami, and how a professional plumber
+                                can help.</p>
+                            <div class="flex items-center justify-between">
+                                <a
+                                    href="blogs/backflow-prevention-importance.html"
+                                    class="text-blue-600 font-medium hover:underline"
+                                    aria-label="Read full article about the importance of backflow prevention in Miami plumbing">
+                                    Read about the importance of ba... <i
+                                        class="fas fa-arrow-right ml-1 text-sm"></i>
+                                </a>
+                                <span class="text-sm text-gray-500">7 min
+                                    read</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="blog-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg"
+                        data-category="Maintenance">
+                        <a href="blogs/water-heater-warning-signs.html"
+                            class="block"
+                            aria-label="Read article: 5 Signs Your Water Heater Needs Immediate Attention">
+                            <div class="h-48 overflow-hidden">
+                                <img
+                                    src="img/blog/water-heater-warning-signs.webp"
+                                    alt="5 Signs Your Water Heater Needs Immediate Attention"
+                                    title="5 Signs Your Water Heater Needs Immediate Attention"
+                                    class="w-full h-full object-cover transform hover:scale-105 transition duration-300">
+                            </div>
+                        </a>
+                        <div class="p-6">
+                            <div
+                                class="flex items-center text-sm text-gray-500 mb-3">
+                                <span
+                                    class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs font-semibold">Maintenance</span>
+                                <span class="mx-2">•</span>
+                                <span>June 1, 2025</span>
+                            </div>
+                            <a href="blogs/water-heater-warning-signs.html"
+                                class="block">
+                                <h3
+                                    class="text-xl font-bold text-blue-800 mb-3 hover:text-blue-600 transition">5
+                                    Signs Your Water Heater Needs Immediate
+                                    Attention</h3>
+                            </a>
+                            <p class="text-gray-600 mb-4">Learn the critical
+                                warning signs that your water heater is failing
+                                and what steps you should take to avoid costly
+                                emergencies and water damage in your Miami
+                                home.</p>
+                            <div class="flex items-center justify-between">
+                                <a href="blogs/water-heater-warning-signs.html"
+                                    class="text-blue-600 font-medium hover:underline"
+                                    aria-label="Read full article about 5 signs your water heater needs immediate attention">
+                                    Read about 5 signs your water h... <i
+                                        class="fas fa-arrow-right ml-1 text-sm"></i>
+                                </a>
+                                <span class="text-sm text-gray-500">8 min
+                                    read</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -374,7 +414,7 @@
 
         <!-- Sticky Buttons -->
         <button id="back-to-top" title="Scroll Back to Top of Page"
-            class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center">
+            class="fixed bottom-32 md:bottom-8 right-6 bg-blue-600 hover:bg-blue-700 text-white w-16 h-16 md:w-12 md:h-12 rounded-full shadow-lg z-50 transition-all duration-300 transform scale-0 opacity-0 flex items-center justify-center cursor-pointer">
             <i class="fas fa-arrow-up text-3xl md:text-xl"></i>
         </button>
 
