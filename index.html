@@ -141,9 +141,7 @@
           <div class="bg-white bg-opacity-90 rounded-lg p-6 max-w-md mx-auto">
             <h3 class="text-2xl font-bold text-blue-800 mb-4">Request a Free
               Estimate</h3>
-            <form class="space-y-4"
-              action="https://formsubmit.co/plumbing24serviceinc@gmail.com"
-              method="POST">
+            <form class="space-y-4">
               <div>
                 <label for="name"
                   class="block text-gray-700 font-medium mb-1">Your Name</label>
@@ -191,10 +189,6 @@
               </div>
               <!-- Anti-spam honeypot -->
               <input type="text" name="_honey" style="display:none">
-              <!-- Disable CAPTCHA -->
-              <input type="hidden" name="_captcha" value="false">
-              <!-- Change the template to 'table' -->
-              <input type="hidden" name="_template" value="table">
               <button type="submit"
                 class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                 Send Message
@@ -749,9 +743,7 @@
             <div class="bg-white rounded-lg p-8 h-full">
               <h3 class="text-2xl font-bold text-blue-800 mb-6">Request a Free
                 Estimate</h3>
-              <form class="space-y-4" id="contact-form-bottom"
-                action="https://formsubmit.co/plumbing24serviceinc@gmail.com"
-                method="POST">
+              <form class="space-y-4" id="contact-form-bottom">
                 <div>
                   <label for="name-bottom"
                     class="block text-gray-700 font-medium mb-1">Your
@@ -798,9 +790,8 @@
                     placeholder="How can we help you?"
                     class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"></textarea>
                 </div>
+                <!-- Anti-spam honeypot -->
                 <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_template" value="table">
                 <button type="submit"
                   class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                   Send Message
@@ -1253,51 +1244,72 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
+        // Hero section form
         const form = document.getElementById('contact-form');
         const toast = document.getElementById('toast-success');
         if (form) {
           form.addEventListener('submit', function (e) {
             e.preventDefault();
-            const formData = new FormData(form);
-            fetch(form.action, {
-              method: 'POST',
-              body: formData,
-              headers: { 'Accept': 'application/json' }
+            const formData = {
+              name: form.name.value,
+              email: form.email.value,
+              phone: form.phone.value,
+              service: form.service.value,
+              message: form.message.value,
+              _honey: form._honey.value,
+              _captcha: "false",
+              _template: "table"
+            };
+            fetch("https://formsubmit.co/ajax/plumbing24serviceinc@gmail.com", {
+              method: "POST",
+              headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(formData)
             })
-            .then(response => {
-              if (response.ok) {
-                toast.style.opacity = '1';
-                toast.style.pointerEvents = 'auto';
-                form.reset();
-                setTimeout(() => {
-                  toast.style.opacity = '0';
-                  toast.style.pointerEvents = 'none';
-                }, 3500);
-              } else {
-                alert('There was an error sending your message. Please try again.');
-              }
+            .then(response => response.json())
+            .then(data => {
+              toast.style.opacity = '1';
+              toast.style.pointerEvents = 'auto';
+              form.reset();
+              setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.pointerEvents = 'none';
+              }, 3500);
             })
             .catch(() => {
               alert('There was an error sending your message. Please try again.');
             });
           });
         }
-      });
 
-      document.addEventListener('DOMContentLoaded', function () {
-      const formBottom = document.getElementById('contact-form-bottom');
-      const toastBottom = document.getElementById('toast-success-bottom');
-      if (formBottom) {
-        formBottom.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const formData = new FormData(formBottom);
-          fetch(formBottom.action, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          })
-          .then(response => {
-            if (response.ok) {
+        // Bottom contact section form
+        const formBottom = document.getElementById('contact-form-bottom');
+        const toastBottom = document.getElementById('toast-success-bottom');
+        if (formBottom) {
+          formBottom.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = {
+              name: formBottom['name-bottom'].value,
+              email: formBottom['email-bottom'].value,
+              phone: formBottom['phone-bottom'].value,
+              service: formBottom['service-bottom'].value,
+              message: formBottom['message-bottom'].value,
+              _honey: formBottom._honey.value,
+              _captcha: "false",
+              _template: "table"
+            };
+            fetch("https://formsubmit.co/ajax/plumbing24serviceinc@gmail.com", {
+              method: "POST",
+              headers: { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
               toastBottom.style.opacity = '1';
               toastBottom.style.pointerEvents = 'auto';
               formBottom.reset();
@@ -1305,16 +1317,13 @@
                 toastBottom.style.opacity = '0';
                 toastBottom.style.pointerEvents = 'none';
               }, 3500);
-            } else {
+            })
+            .catch(() => {
               alert('There was an error sending your message. Please try again.');
-            }
-          })
-          .catch(() => {
-            alert('There was an error sending your message. Please try again.');
+            });
           });
-        });
-      }
-    });
+        }
+      });
       </script>
         </body>
       </html>
